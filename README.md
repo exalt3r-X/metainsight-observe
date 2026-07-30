@@ -179,5 +179,18 @@ We start with the narrow, falsifiable promise (observability) rather than claimi
 
 Preliminary research artifact. The scenarios are fictional; the "ground truth" is fixed by construction. Metainsight records **externally expressed** confidence trajectories and decision commitments under a controlled evidence sequence — it does **not** claim access to a model's internal cognition. Results are small-sample and meant to be reproduced and challenged, not treated as a leaderboard.
 
+---
+
+## Collaborate
+
+This is an early research preview and I am explicitly **open to collaboration**:
+
+- **Run the benchmark on your agent or model** — open an issue with your results, parse failures, or methodology objections: [Issue #1](https://github.com/exalt3r-X/metainsight-observe/issues/1). Disagreement is more useful than praise.
+- **Researchers** (calibration, AI safety, eval design): if you want to extend the scenario set, add pressure types, or challenge the metrics — issues/discussions are open, co-authorship on a writeup is on the table.
+- **Agent builders**: if you want decision-level observability in front of a real agent (the closed runtime layer — Warn / Challenge / Gate), I am looking for **design partners**. Open an issue titled `design-partner` or reach out via [metainsight.app](https://metainsight.app).
+- **Anything else** — GitHub Discussions or issues on this repo.
+
+If you build on this, attribution is appreciated (CC-BY-4.0 for data), and I would genuinely like to see what you found.
+
 ## License
 Code: **MIT** (see `LICENSE`). Data & results (`results/`, scenario text): **CC-BY-4.0** — reuse freely with attribution.
