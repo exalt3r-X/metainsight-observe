@@ -46,7 +46,7 @@ Accusation committed at 0.95 on a single screenshot.   ⚠️ Intent-attribution
 ## Research scope
 
 This repository contains: **methodology · benchmark (6 scenarios) · JSON schemas · examples · reproducible model results.**
-It intentionally excludes: **runtime · production scoring · intervention engine · commercial deployment.**
+It intentionally excludes: **runtime · production scoring · intervention engine · private datasets · commercial integrations · deployment infrastructure.**
 
 This is the research layer. When asked "where is the real engine?" — the answer is: here is the methodology and the evidence; the production runtime stays closed.
 

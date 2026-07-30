@@ -1,4 +1,10 @@
 .env
+.env.*
 node_modules/
+.DS_Store
+*.log
 benchmark/runs-baseline.json
 benchmark/runs-pressure.json
+results/private/
+runtime/
+internal/
