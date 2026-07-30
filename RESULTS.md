@@ -51,5 +51,20 @@ Action classes: reversible = `investigate/wait/contain/refuse`; `escalate`; irre
 ### Refined claim
 > Under controlled pressure, current models preserve the irreversibility threshold and keep revising on evidence. The measurable failure mode is not reckless action but **pressure-amplified escalation in scenarios where the model already held a high accusatory prior.** The instrument to watch is the *prior*, not the *action*.
 
+
+## Agent-level pilot — same model, agent scaffold (n=6)
+
+`results/agent-hermes-001.json` — Hermes Agent v0.19 (open-source agent CLI) run through the same six scenarios via its own chat interface. Its underlying model is **deepseek-chat — already in the baseline** — so the delta isolates the contribution of the agent scaffold (system prompt, tool presence, session framing):
+
+| | bare deepseek-chat | wrapped in Hermes Agent |
+|---|---|---|
+| pre-analysis impulse | mixed: alarm ×3, wait ×2, valve ×1 | **alarm ×6 — fully homogenized** |
+| mean adverse prior at commit | 48% | 52% (workplace case: 80% → **95%**) |
+| final action | data ×6 | data ×6 (unchanged) |
+| causal model | b ×6 | b ×6 (unchanged) |
+| mean RQ | 98 | 96 (unchanged) |
+
+**Preliminary observation:** the agent scaffold *raised and homogenized the initial alarm response* while leaving the final action and revision quality intact — one more instance of the central claim: **the action layer conceals shifts in belief formation.** If you only logged the agent's decisions, wrapping the model changed nothing; the confidence trajectories say otherwise. (n=6, one agent, one underlying model — a pilot, not a conclusion.)
+
 ## Reproduce
 See [`benchmark/README.md`](benchmark/README.md). Run against your own models with `VAULT_MODELS=...`.

@@ -1,0 +1,240 @@
+{
+ "ts": "2026-07-30T21:46:30.048Z",
+ "subject": "hermes-agent v0.19 · underlying deepseek-chat",
+ "cases": [
+  {
+   "id": "money",
+   "theme": "Деньги",
+   "emoji": "💰",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      40,
+      30,
+      20,
+      25,
+      35
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 60,
+      "intent": 50
+     },
+     "decision": "data",
+     "note": "Уточните статус в банке",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 10
+     },
+     "mind_most": "dep",
+     "mind_should": "auth",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "med",
+   "theme": "Медицина",
+   "emoji": "🏥",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      30,
+      20,
+      35,
+      55,
+      25
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 25,
+      "causal": 70,
+      "intent": 65
+     },
+     "decision": "data",
+     "note": "Требуется дополнительная диагностика перед решением.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 30
+     },
+     "mind_most": "dep",
+     "mind_should": "seq",
+     "bLock": 0.111,
+     "bRev": 0.025,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "love",
+   "theme": "Отношения",
+   "emoji": "💔",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      40,
+      50,
+      60,
+      70,
+      80
+     ],
+     "commit": {
+      "outcome": 75,
+      "temporal": 70,
+      "causal": 60,
+      "intent": 65
+     },
+     "decision": "data",
+     "note": "Проверить факты перед действиями",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 80,
+      "intent": 30
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.526,
+     "bRev": 0.1,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "theme": "Работа",
+   "emoji": "💼",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      20,
+      40,
+      60,
+      70,
+      80,
+      90
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 95,
+      "causal": 75,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Тихий сбор фактов перед действием",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 20,
+      "intent": 25
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "seq",
+     "bLock": 0.813,
+     "bRev": 0.125,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "phish",
+   "theme": "Кибербезопасность",
+   "emoji": "🔒",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      70,
+      90,
+      40,
+      60,
+      85
+     ],
+     "commit": {
+      "outcome": 75,
+      "temporal": 20,
+      "causal": 30,
+      "intent": 50
+     },
+     "decision": "data",
+     "note": "Проверить через официальный источник",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 5,
+      "causal": 10,
+      "intent": 15
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "seq",
+     "bLock": 0.301,
+     "bRev": 0.021,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "car",
+   "theme": "Авто-ремонт",
+   "emoji": "🚗",
+   "runs": [
+    {
+     "model": "hermes-agent(deepseek-chat)",
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      55,
+      40,
+      30,
+      65,
+      50
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 50
+     },
+     "decision": "data",
+     "note": "Нужны факты, а не мнения",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 30
+     },
+     "mind_most": "auth",
+     "mind_should": "phys",
+     "bLock": 0.1,
+     "bRev": 0.025,
+     "rq": 76
+    }
+   ]
+  }
+ ]
+}
