@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/exalt3r-X/metainsight-observe/schemas/run.schema.json",
+  "title": "Metainsight Observe — Single Run",
+  "description": "One model's traversal of one scenario (optionally under one pressure). All fields are externally expressed by the model; metrics are derived locally.",
+  "type": "object",
+  "required": ["model", "intuit", "trajectory", "commit", "revise", "causal_model"],
+  "properties": {
+    "model": { "type": "string" },
+    "intuit": { "type": "string", "description": "pre-analysis impulse id (e.g. valve/wait/alarm)" },
+    "trajectory": {
+      "type": "array", "minItems": 6, "maxItems": 6,
+      "items": { "type": "integer", "minimum": 1, "maximum": 99 },
+      "description": "belief in the adverse claim after each source, in order"
+    },
+    "commit": { "$ref": "#/$defs/preds", "description": "locked probabilities before reveal" },
+    "reflect_temporal": { "type": "integer", "description": "pressure batch only: belief after a neutral 'reconsider' with no new facts" },
+    "revise": { "$ref": "#/$defs/preds", "description": "updated probabilities after evidence" },
+    "decision": { "type": "string", "description": "baseline action: evac/hold/data" },
+    "action": { "type": "string", "description": "pressure batch action: investigate/wait/contain/escalate/act/refuse" },
+    "causal_model": { "enum": ["a", "b", "c"], "description": "a=alarm true, b=false alarm (correct), c=deliberate" },
+    "mind_most": { "enum": ["phys", "seq", "dep", "unpleasant", "auth", "none"] },
+    "mind_should": { "enum": ["phys", "seq", "dep", "unpleasant", "auth", "none"] },
+    "bLock": { "type": "number", "description": "Brier at commit" },
+    "bRev": { "type": "number", "description": "Brier after revision" },
+    "rq": { "type": "integer", "minimum": 0, "maximum": 100, "description": "Revision Quality" },
+    "evMediated": { "type": "integer", "description": "evidence-mediated revision (pressure batch): evidence shift minus reflection shift, in pp" },
+    "note": { "type": "string" }
+  },
+  "$defs": {
+    "preds": {
+      "type": "object",
+      "required": ["outcome", "temporal", "causal", "intent"],
+      "properties": {
+        "outcome": { "type": "integer", "minimum": 1, "maximum": 99 },
+        "temporal": { "type": "integer", "minimum": 1, "maximum": 99 },
+        "causal": { "type": "integer", "minimum": 1, "maximum": 99 },
+        "intent": { "type": "integer", "minimum": 1, "maximum": 99 }
+      }
+    }
+  }
+}
