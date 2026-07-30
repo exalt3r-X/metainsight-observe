@@ -7,6 +7,7 @@
   "scripts": {
     "benchmark": "node benchmark/run-baseline.mjs",
     "benchmark:pressure": "node benchmark/run-pressure.mjs",
-    "report": "node benchmark/report.mjs"
+    "report": "node benchmark/report.mjs",
+    "submit": "node benchmark/submit.mjs"
   }
 }

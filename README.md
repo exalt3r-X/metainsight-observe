@@ -187,6 +187,16 @@ Preliminary research artifact. The scenarios are fictional; the "ground truth" i
 
 ---
 
+## Share your results (opt-in)
+
+Nothing in this repo phones home — no telemetry, ever. If you ran the benchmark and want your results in the community dataset:
+
+```bash
+npm run submit   # prints an aggregate summary + an issue link; nothing is sent automatically
+```
+
+Submissions contain model slugs and aggregate metrics only (no keys, no prompts, no personal data). Once enough independent submissions accumulate, a community results table will be added to RESULTS.md — models ranked by Revision Quality, Epistemic Bias and Action Discipline across independent runs.
+
 ## Break the methodology
 
 The most useful contribution is not feedback — it's a break. Concretely:
