@@ -148,6 +148,17 @@ Note the decoupling the table already shows: **high Revision Quality does not im
 
 ---
 
+## Related work
+
+Adjacent benchmarks are emerging — we cite them gladly; the angles differ:
+
+- **DEMM-Bench** ([arXiv:2606.20634](https://arxiv.org/abs/2606.20634)) measures whether an agent runtime's *records* (traces, ledgers, schemas) are sufficient to reconstruct decision-level properties after the fact — governance-evidence sufficiency. Its "container fallacy" (presence of a trace ≠ sufficiency of evidence) is a post-hoc audit cousin of our action-safety ≠ epistemic-safety claim.
+- **Evidence-grounding benchmarks** (e.g. [arXiv:2605.08828](https://arxiv.org/abs/2605.08828)) test whether an agent keeps its actions grounded in the true environment state when observations are stale, wrong, or malicious.
+
+This repo measures a third thing: **how the agent forms and revises confidence before acting** — initial priors, dependent-source handling, evidence-mediated revision, pressure response. Audit sufficiency (DEMM), observation grounding, and belief formation (here) are complementary layers of the same problem.
+
+---
+
 ## Relationship to the Decision Receipt spec
 
 The **Decision Receipt** — the machine-readable record of a single decision's provenance (observations available, competing hypotheses, confidence, rejected alternatives, authority scope, action threshold, reopen conditions) — is specified separately in the protocol repo:
