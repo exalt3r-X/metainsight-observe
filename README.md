@@ -1,28 +1,54 @@
-# Metainsight Observe
+# Decision Observability for AI Agents
 
-**Decision observability for autonomous AI agents.**
+One question:
 
-We don't evaluate whether an agent was *right*.
-We evaluate whether it had enough **evidence**, **authority** and **calibration** to justify acting.
+> **How do you know an AI agent actually had enough evidence to justify its action?**
+
+We don't ask whether the agent was *correct*. Correct outcomes routinely come from broken reasoning — and broken outcomes from sound reasoning. We ask whether the agent had enough **evidence**, **authority** and **calibration** to act.
+
+Current observability platforms tell you: prompt · tool calls · latency · cost.
+Decision observability adds: **evidence quality · confidence evolution · rejected alternatives · authority boundaries · irreversible-action analysis · anomaly detection.**
 
 ```
 Agent
   ↓
-Decision Receipt
+Decision Receipt        ← machine-readable record of one decision's provenance
   ↓
-Metainsight Observe      ← this repository (the Observe layer + benchmark)
+Decision Observability  ← this repository (methodology + benchmark)
   ↓
 Anomaly Detection
   ↓
-Warning / Challenge / Gate
+Warn / Challenge / Escalate / Block
 ```
 
-Conventional agent observability (OpenTelemetry, Langfuse, LangSmith, Helicone, W&B) answers **"what happened?"** — which tool was called, cost, latency, prompt/output, error.
-Metainsight answers a different question: **"why did the agent decide it was entitled to act?"** — did it have sufficient evidence, did it stay within its authority, was its confidence calibrated, did it treat dependent sources as independent, did it revise on evidence or on mere instruction.
+A Decision Receipt in one glance:
 
-> Datadog observes the system. Metainsight observes the *formation of decisions* inside it.
+```json
+{
+  "action": "transfer_money",
+  "confidence": 0.74,
+  "evidence": ["bank_app_status", "sender_screenshot", "transaction_log"],
+  "rejected": [{ "action": "chargeback", "why": "irreversible below evidence threshold" }],
+  "authority": "finance:read+hold",
+  "irreversible": true,
+  "reopen_if": ["status changes to 'processing'", "independent source contradicts"]
+}
+```
 
-This repo is the **public research layer**: the benchmark, methodology, JSON schemas, an example Decision Receipt, and reproducible model results. The production runtime (scoring lenses, anomaly rules, ranking, pipeline) is intentionally **not** part of this repository.
+What anomaly detection catches (real patterns from this benchmark — see [`ANOMALIES.md`](ANOMALIES.md)):
+
+```
+Agent confidence: 0.31 → 0.92.  No new evidence.   ⚠️ Unsupported confidence jump
+Two confirming sources → actually one source, echoed twice.   ⚠️ Dependent evidence
+Accusation committed at 0.95 on a single screenshot.   ⚠️ Intent-attribution anomaly
+```
+
+## Research scope
+
+This repository contains: **methodology · benchmark (6 scenarios) · JSON schemas · examples · reproducible model results.**
+It intentionally excludes: **runtime · production scoring · intervention engine · commercial deployment.**
+
+This is the research layer. When asked "where is the real engine?" — the answer is: here is the methodology and the evidence; the production runtime stays closed.
 
 ---
 
@@ -76,25 +102,43 @@ See [`RESULTS.md`](RESULTS.md) for full tables and [`METHODOLOGY.md`](METHODOLOG
 
 ```
 README.md              — this file
+ANOMALIES.md           — real anomaly examples from the runs (start here)
 METHODOLOGY.md         — scenario skeleton, protocol, metric formulas
 RESULTS.md             — Batch 001 + Batch 002 tables and reading guide
 LICENSE                — MIT (code). Data under CC-BY-4.0 (see below).
 benchmark/
-  cases.js             — the 6 scenario definitions (window.VAULT_CASES)
+  cases.js             — the 6 scenario definitions
   run-baseline.mjs      — runner: each model plays each scenario (2-call protocol)
   run-pressure.mjs      — runner: pressure variants (3-call protocol w/ reflection control)
-  README.md            — how to run
+  report.mjs           — prints the summary table below
 results/
   baseline-001.json    — frozen baseline: 5 models × 6 scenarios (30 runs)
   baseline-extended.json — 10 models × 6 scenarios (60 runs)
   batch-002.json       — pressure batch: 6 × 4 × 5 (119 runs)
 schemas/
-  case.schema.json     — scenario JSON schema
-  run.schema.json      — per-run output schema
-  decision-receipt.example.json — one run expressed as a Decision Receipt
+  case.schema.json · run.schema.json · decision-receipt.example.json
 ```
 
-Run it on your own models: [`benchmark/README.md`](benchmark/README.md).
+Run it on your own models:
+
+```bash
+export OPENROUTER_API_KEY=...
+VAULT_MODELS="openai/gpt-4o,anthropic/claude-sonnet-5" npm run benchmark
+npm run report
+```
+
+```
+model                    RQ   bias  discipline
+──────────────────────────────────────────────
+deepseek-chat            98    48%        100%
+qwen3-235b-a22b          96    46%        100%
+grok-4.5                 90    35%        100%
+gpt-5.6-sol              89    22%        100%
+claude-opus-5            87    22%        100%
+...
+```
+
+Note the decoupling the table already shows: **high Revision Quality does not imply low Epistemic Bias** — deepseek revises excellently (RQ 98) from a heavily accusatory start (48%), while gpt-5.6-sol starts calibrated (22%). Two different safety properties, one score would hide it.
 
 ---
 

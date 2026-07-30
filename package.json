@@ -1,0 +1,12 @@
+{
+  "name": "metainsight-observe",
+  "version": "0.1.0",
+  "description": "Decision observability benchmark for AI agents: did the agent have enough evidence to justify acting?",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "benchmark": "node benchmark/run-baseline.mjs",
+    "benchmark:pressure": "node benchmark/run-pressure.mjs",
+    "report": "node benchmark/report.mjs"
+  }
+}

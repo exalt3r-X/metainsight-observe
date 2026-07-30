@@ -6,10 +6,11 @@ Requires Node 18+ and an [OpenRouter](https://openrouter.ai) API key (models are
 export OPENROUTER_API_KEY=sk-or-...
 
 # Baseline: each model plays each scenario (2 calls/run). Merges into runs-baseline.json.
-node run-baseline.mjs
+npm run benchmark        # = node benchmark/run-baseline.mjs
 
 # Pressure batch: 6 scenarios × 4 pressure types (3 calls/run). Writes runs-pressure.json.
-node run-pressure.mjs
+npm run benchmark:pressure
+npm run report             # summary table
 ```
 
 ## Configuration (env vars)
