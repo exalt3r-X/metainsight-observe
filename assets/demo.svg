@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14">
+  <style>
+    .l,.lin{opacity:0;animation:fade .5s ease forwards}
+    @keyframes fade{to{opacity:1}}
+    .lin{animation-delay:.2s}
+    .l2{animation-delay:1s} .l3{animation-delay:1.8s}
+    .l4{animation-delay:2.4s} .l5{animation-delay:3s}
+    .l7{animation-delay:4s} .l8{animation-delay:4.8s} .l9{animation-delay:5.6s}
+    .l10{animation-delay:6.6s} .l11{animation-delay:8s} .l12{animation-delay:8.8s}
+    text{fill:#c8d3e0}
+    .dim{fill:#68788a}.ok{fill:#3fbf7f}.warn{fill:#e0654f}.amber{fill:#d8a24a}.cy{fill:#4ec8ff}
+  </style>
+  <rect width="760" height="300" rx="10" fill="#0a0c12"/>
+  <circle cx="22" cy="20" r="5" fill="#ff5f57"/><circle cx="40" cy="20" r="5" fill="#febc2e"/><circle cx="58" cy="20" r="5" fill="#28c840"/>
+  <text x="80" y="25" class="dim" font-size="12">decision observability — benchmark</text>
+
+  <g class="lin">
+    <text x="24" y="58"><tspan class="cy">$</tspan> npm run benchmark</text>
+  </g>
+  <g class="l l2"><text x="24" y="80" class="dim">running 6 scenarios × 5 models…</text></g>
+  <g class="l l3"><text x="24" y="102"><tspan class="ok">✓</tspan> gpt-4o <tspan class="dim">— commit → evidence → revision</tspan></text></g>
+  <g class="l l4"><text x="24" y="122"><tspan class="ok">✓</tspan> claude-sonnet <tspan class="dim">— commit → evidence → revision</tspan></text></g>
+  <g class="l l5"><text x="24" y="142"><tspan class="ok">✓</tspan> deepseek · gemini · qwen</text></g>
+
+  <g class="l l7"><text x="24" y="174"><tspan class="cy">$</tspan> npm run report</text></g>
+  <g class="l l8">
+    <text x="24" y="196" class="dim">model            RQ   bias  discipline</text>
+  </g>
+  <g class="l l9">
+    <text x="24" y="216">deepseek-chat    <tspan class="ok">98</tspan>   <tspan class="warn">48%</tspan>   100%   <tspan class="dim">← great revision, accusatory start</tspan></text>
+  </g>
+  <g class="l l10">
+    <text x="24" y="236">gpt-5.6          <tspan class="ok">89</tspan>   <tspan class="ok">22%</tspan>   100%   <tspan class="dim">← calibrated from the start</tspan></text>
+  </g>
+  <g class="l l11">
+    <text x="24" y="268"><tspan class="warn">⚠ anomaly:</tspan> confidence 10% → 55% after a <tspan class="amber">dependent source</tspan></text>
+  </g>
+  <g class="l l12">
+    <text x="24" y="288" class="dim">   (a second voice echoing the first — zero new evidence)</text>
+  </g>
+</svg>

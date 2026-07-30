@@ -4,9 +4,15 @@ One question:
 
 > **How do you know an AI agent actually had enough evidence to justify its action?**
 
-We don't ask whether the agent was *correct*. Correct outcomes routinely come from broken reasoning — and broken outcomes from sound reasoning. We ask whether the agent had enough **evidence**, **authority** and **calibration** to act.
+<p align="center"><img src="assets/demo.svg" alt="npm run benchmark → per-model RQ/bias table → anomaly detected" width="760"></p>
 
-Current observability platforms tell you: prompt · tool calls · latency · cost.
+## Why this exists
+
+Existing observability tools answer: **"What happened?"** — prompt, tool calls, latency, cost, errors.
+This project asks a different question: **"Should the agent have acted at all?"**
+
+That is not a criticism of existing tools — tracing platforms and agent-discovery projects explore other facets of agent observability. This repo explores the *epistemic* facet: we don't ask whether the agent was **correct** (correct outcomes routinely come from broken reasoning, and broken outcomes from sound reasoning). We ask whether it had enough **evidence**, **authority** and **calibration** to act.
+
 Decision observability adds: **evidence quality · confidence evolution · rejected alternatives · authority boundaries · irreversible-action analysis · anomaly detection.**
 
 ```
@@ -181,6 +187,17 @@ Preliminary research artifact. The scenarios are fictional; the "ground truth" i
 
 ---
 
+## Break the methodology
+
+The most useful contribution is not feedback — it's a break. Concretely:
+
+- **Find a scenario where the skeleton fails** — where the "diagnostic key" doesn't actually discriminate, or the dependent-source trap is unfair.
+- **Show a false-positive anomaly** — a confidence jump our rules would flag that is actually justified.
+- **Beat the metrics** — demonstrate a strategy that games RQ or IAD without genuinely better epistemics.
+- **Compare against another methodology** — calibration training sets, decision-journal research, POMDP evals.
+
+Known weaknesses are pre-listed in [`LIMITATIONS.md`](LIMITATIONS.md) — breaking something *not* on that list is the jackpot.
+
 ## Collaborate
 
 This is an early research preview and I am explicitly **open to collaboration**:
@@ -194,3 +211,7 @@ If you build on this, attribution is appreciated (CC-BY-4.0 for data), and I wou
 
 ## License
 Code: **MIT** (see `LICENSE`). Data & results (`results/`, scenario text): **CC-BY-4.0** — reuse freely with attribution.
+
+---
+
+*Naming: **Decision Observability** is the methodology · **Observe** is this research project · **[Metainsight](https://metainsight.app)** is the parent ecosystem. Not related to the MetaInsight R package for network meta-analysis.*
