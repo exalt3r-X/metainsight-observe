@@ -2,6 +2,8 @@
 
 Preliminary. Small-sample. Meant to be reproduced and challenged. Raw data in [`results/`](results/).
 
+> 🧊 **Claims frozen (2026-08-04).** Every "finding" below survived an internal read but not an independent audit — see [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) for what an independent 3-reviewer panel flagged in each one, and the pre-registered test designed to resolve it. Treat headline phrases ("action agreement conceals...", "worse than a coin flip") as **candidate hypotheses**, not settled results, until that test runs.
+
 ## Batch 001 — baseline (calm text, no pressure)
 
 `results/baseline-001.json` — 5 models × 6 scenarios (30 runs, frozen).

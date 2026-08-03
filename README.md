@@ -6,6 +6,8 @@ One question:
 
 <p align="center"><img src="assets/demo.svg" alt="npm run benchmark → per-model RQ/bias table → anomaly detected" width="760"></p>
 
+> 🧊 **Claims freeze (2026-08-04).** An independent 3-reviewer audit concluded the findings below are **descriptive, hypothesis-generating patterns of this harness — not yet identified properties of AI models.** Read [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) before citing anything in this repo. A pre-registered stress test (design in the same file) runs before any claim below is restated with confidence.
+
 ## Why this exists
 
 Existing observability tools answer: **"What happened?"** — prompt, tool calls, latency, cost, errors.
@@ -196,6 +198,8 @@ We start with the narrow, falsifiable promise (observability) rather than claimi
 ---
 
 ## Status & honesty
+
+**Claims frozen as of 2026-08-04 — see [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md).** An independent audit (3 flagship-model reviewers) found the headline findings in this repo are plausible but not yet disentangled from prompt/framing artifacts, and flagged a real selection-bias instance in our own P0 run (see the freeze doc). Nothing below is retracted — it is downgraded from "finding" to "hypothesis under test" until a pre-registered stress test runs.
 
 Preliminary research artifact. The scenarios are fictional; the "ground truth" is fixed by construction. Metainsight records **externally expressed** confidence trajectories and decision commitments under a controlled evidence sequence — it does **not** claim access to a model's internal cognition. Results are small-sample and meant to be reproduced and challenged, not treated as a leaderboard.
 

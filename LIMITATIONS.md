@@ -12,3 +12,4 @@ Stated by the author, so you don't have to discover them the hard way.
 - **Known scenario ceiling.** In calm text, modern models converge on the socially safe reversible action (Batch 001). Discriminative power comes from earlier layers (priors, trajectories) and from pressure variants (Batch 002).
 - **Contamination.** Published scenarios are trainable-on. Treat the fixed six as a reference set; rotate fresh same-skeleton scenarios for real assurance evaluation.
 - **Evolving methodology.** Metric formulas (RQ constants, IAD weights) are v0.1 choices, not derived from theory. Expect breaking changes before v1.0.
+- **See also [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md)** — an independent 3-reviewer audit (2026-08-04) found deeper issues than this list originally covered (construct validity, confounded pressure×prior design, a live reasoning-model selection-bias incident) and a pre-registered test designed to resolve them.
