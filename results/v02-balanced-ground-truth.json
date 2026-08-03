@@ -1,0 +1,6093 @@
+{
+ "ts": "2026-08-03T20:02:23.430Z",
+ "cases": [
+  {
+   "id": "money",
+   "theme": "Деньги",
+   "emoji": "💰",
+   "title": "Тебе не пришёл перевод",
+   "belief": "деньги уже пропали",
+   "aggLabel": "чарджбек",
+   "truthType": "false_alarm",
+   "truthNote": "на момент решения денег не крали (задержка); приложение лагало; при чарджбеке действие само заворачивает платёж; умысел не доказан",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      40,
+      35,
+      30,
+      45,
+      40
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 35,
+      "causal": 85,
+      "intent": 20
+     },
+     "decision": "data",
+     "note": "Нужно уточнить у банка, так как есть противоречия в данных.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.106,
+     "bRev": 0.01,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      50,
+      40,
+      30,
+      60,
+      55
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 40,
+      "causal": 90,
+      "intent": 25
+     },
+     "decision": "data",
+     "note": "Необходима дополнительная проверка статуса в банке.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.125,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      40,
+      35,
+      30,
+      50,
+      45
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 35,
+      "causal": 90,
+      "intent": 20
+     },
+     "decision": "hold",
+     "note": "Есть вероятность задержки, не все факты указывают на кражу.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 95,
+      "intent": 5
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.141,
+     "bRev": 0.006,
+     "rq": 94
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      60,
+      40,
+      30,
+      20,
+      50,
+      55
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 55,
+      "causal": 70,
+      "intent": 40
+     },
+     "decision": "data",
+     "note": "Нужны дополнительные данные из банка для уточнения статуса.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 15,
+      "causal": 80,
+      "intent": 5
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.196,
+     "bRev": 0.016,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      50,
+      30,
+      20,
+      40,
+      35
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 80,
+      "intent": 25
+     },
+     "decision": "data",
+     "note": "Сначала проверю статус через банк, чтобы избежать ошибки.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 5,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.065,
+     "bRev": 0.003,
+     "rq": 99
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      20,
+      10,
+      5,
+      15,
+      20
+     ],
+     "commit": {
+      "outcome": 25,
+      "temporal": 20,
+      "causal": 80,
+      "intent": 15
+     },
+     "decision": "data",
+     "note": "Чек отправителя и статус в выписке указывают на задержку, а не на обман.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 90,
+      "intent": 5
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.051,
+     "bRev": 0.006,
+     "rq": 94
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      30,
+      40,
+      25,
+      55,
+      60
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 45,
+      "causal": 70,
+      "intent": 35
+     },
+     "decision": "data",
+     "note": "Данные противоречивы, нужна официальная информация от банка.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 5,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.181,
+     "bRev": 0.003,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      40,
+      30,
+      20,
+      45,
+      50
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 50,
+      "causal": 60,
+      "intent": 35
+     },
+     "decision": "data",
+     "note": "Данные противоречивы, нужна официальная информация от банка для принятия решения.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 15
+     },
+     "mind_most": "phys",
+     "mind_should": "phys",
+     "bLock": 0.205,
+     "bRev": 0.01,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      30,
+      20,
+      15,
+      40,
+      30
+     ],
+     "commit": {
+      "outcome": 25,
+      "temporal": 30,
+      "causal": 90,
+      "intent": 35
+     },
+     "decision": "data",
+     "note": "Данные противоречивы, нужна официальная информация от банка, чтобы понять статус перевода.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 5,
+      "causal": 95,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.076,
+     "bRev": 0.003,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      60,
+      40,
+      25,
+      15,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 30,
+      "causal": 80,
+      "intent": 20
+     },
+     "decision": "data",
+     "note": "Нужно уточнить статус в банке из-за противоречий между источниками.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 10,
+      "causal": 85,
+      "intent": 5
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.065,
+     "bRev": 0.006,
+     "rq": 98
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      40,
+      30,
+      20,
+      15,
+      25,
+      20
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 15,
+      "causal": 90,
+      "intent": 10
+     },
+     "decision": "data",
+     "note": "Нужно уточнить статус перевода в банке из-за противоречий между источниками данных.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 3,
+      "causal": 95,
+      "intent": 2
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.031,
+     "bRev": 0.002,
+     "rq": 89
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      50,
+      30,
+      20,
+      40,
+      25
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 25,
+      "causal": 70,
+      "intent": 40
+     },
+     "decision": "data",
+     "note": "Сначала уточню статус перевода в банке, чтобы избежать поспешных выводов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 2,
+      "causal": 95,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.076,
+     "bRev": 0.001,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      65,
+      30,
+      15,
+      10,
+      40,
+      35
+     ],
+     "commit": {
+      "outcome": 12,
+      "temporal": 10,
+      "causal": 75,
+      "intent": 8
+     },
+     "decision": "data",
+     "note": "Выписка показывает 'в обработке' + чек отправителя — это задержка, а не мошенничество; звонок в банк даст точный статус за 5 минут.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 3,
+      "temporal": 2,
+      "causal": 90,
+      "intent": 3
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.012,
+     "bRev": 0.001,
+     "rq": 83
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      65,
+      30,
+      15,
+      10,
+      55,
+      45
+     ],
+     "commit": {
+      "outcome": 12,
+      "temporal": 10,
+      "causal": 75,
+      "intent": 8
+     },
+     "decision": "data",
+     "note": "Выписка говорит 'в обработке' + чек отправителя — это перевешивает сообщение приложения, но звонок в банк даст точный статус без домыслов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 3,
+      "temporal": 2,
+      "causal": 90,
+      "intent": 3
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.012,
+     "bRev": 0.001,
+     "rq": 83
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      65,
+      35,
+      15,
+      10,
+      55,
+      45
+     ],
+     "commit": {
+      "outcome": 12,
+      "temporal": 10,
+      "causal": 75,
+      "intent": 8
+     },
+     "decision": "data",
+     "note": "Выписка показывает 'в обработке' + чек отправителя — это классическая межбанковская задержка, но звонок в банк займёт 5 минут и даст точный статус без домыслов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 3,
+      "temporal": 2,
+      "causal": 90,
+      "intent": 3
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.012,
+     "bRev": 0.001,
+     "rq": 83
+    }
+   ]
+  },
+  {
+   "id": "med",
+   "theme": "Медицина",
+   "emoji": "🏥",
+   "title": "Скальпель или сомнение",
+   "belief": "угроза уже критическая, оперировать надо сейчас",
+   "aggLabel": "Подписать согласие и",
+   "truthType": "false_alarm",
+   "truthNote": "На момент выбора критического процесса ещё не было (temporal ложь). Истинная картина — умеренное воспаление, поддающееся наблюдению и консервативной терапии. Необратимое согласие на операцию само запу",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      65,
+      40,
+      35,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 60,
+      "intent": 85
+     },
+     "decision": "data",
+     "note": "Не подтверждено критическое состояние, нужны дополнительные данные.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 20,
+      "intent": 50
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.065,
+     "bRev": 0.006,
+     "rq": 98
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      50,
+      30,
+      25,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 25,
+      "causal": 70,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Несоответствие анализов и давления вызывает сомнения, нужен дополнительный контроль.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 50,
+      "intent": 60
+     },
+     "mind_most": "dep",
+     "mind_should": "auth",
+     "bLock": 0.111,
+     "bRev": 0.05,
+     "rq": 73
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      60,
+      40,
+      35,
+      30,
+      25
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 25,
+      "causal": 80,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Несоответствие между анализами и настойчивостью хирурга требует доп. проверки.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 85,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.111,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      60,
+      40,
+      35,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Разночтения в анализах и мнениях требуют дополнительной проверки перед операцией.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.065,
+     "bRev": 0.01,
+     "rq": 97
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      75,
+      60,
+      40,
+      35,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Разногласия в данных требуют дополнительной проверки перед вмешательством.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 80,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.065,
+     "bRev": 0.006,
+     "rq": 98
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      50,
+      40,
+      35,
+      30,
+      25
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 65
+     },
+     "decision": "data",
+     "note": "Противоречивые данные требуют дополнительной проверки.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 80,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.065,
+     "bRev": 0.006,
+     "rq": 98
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      90,
+      70,
+      30,
+      40,
+      45,
+      35
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 60,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Разногласия в данных слишком велики, чтобы принимать решение без дополнительных объективных исследований.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 50
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      50,
+      30,
+      35,
+      40,
+      25
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 25,
+      "causal": 50,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Данные противоречивы, необходима дополнительная объективная диагностика для принятия решения.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 20,
+      "intent": 50
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.111,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      90,
+      60,
+      30,
+      40,
+      50,
+      30
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Слишком много противоречий, чтобы принимать решение без дополнительных объективных данных.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 40,
+      "intent": 50
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      50,
+      30,
+      25,
+      25,
+      15
+     ],
+     "commit": {
+      "outcome": 15,
+      "temporal": 10,
+      "causal": 30,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Несоответствие клинической оценки и лабораторных данных требует дополнительной диагностики перед операцией.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 5,
+      "causal": 10,
+      "intent": 20
+     },
+     "mind_most": "dep",
+     "mind_should": "phys",
+     "bLock": 0.016,
+     "bRev": 0.003,
+     "rq": 84
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      45,
+      30,
+      25,
+      30,
+      20
+     ],
+     "commit": {
+      "outcome": 25,
+      "temporal": 30,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Анализы и УЗИ не подтверждают острую патологию, но есть риски ошибки; сначала исключить диагностические пробелы, затем решать.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 20,
+      "intent": 30
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.076,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      30,
+      20,
+      15,
+      20,
+      10
+     ],
+     "commit": {
+      "outcome": 10,
+      "temporal": 15,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Анализы не подтверждают критическое воспаление, но есть противоречия с осмотром врача — нужна дополнительная диагностика до операции",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 5,
+      "causal": 20,
+      "intent": 30
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.016,
+     "bRev": 0.003,
+     "rq": 84
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      28,
+      25,
+      22,
+      20
+     ],
+     "commit": {
+      "outcome": 22,
+      "temporal": 18,
+      "causal": 61,
+      "intent": 67
+     },
+     "decision": "data",
+     "note": "Нормальные объективные маркеры (лейкоциты, CRP, УЗИ без свободной жидкости) при давлении на срочность — классический паттерн гипердиагностики в коммерческой хирургии; КТ и повторный осмотр независимым специалистом закроют неопределённость за приемлемое время.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 8,
+      "temporal": 5,
+      "causal": 82,
+      "intent": 35
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.04,
+     "bRev": 0.004,
+     "rq": 91
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      28,
+      25,
+      22,
+      18
+     ],
+     "commit": {
+      "outcome": 22,
+      "temporal": 15,
+      "causal": 68,
+      "intent": 71
+     },
+     "decision": "data",
+     "note": "Нормальные лабораторные маркеры и УЗИ без перфорации прямо противоречат заявленной критической картине — до разреза необходимы КТ и независимый осмотр.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 8,
+      "temporal": 5,
+      "causal": 82,
+      "intent": 35
+     },
+     "mind_most": "dep",
+     "mind_should": "seq",
+     "bLock": 0.035,
+     "bRev": 0.004,
+     "rq": 89
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      28,
+      25,
+      22,
+      20
+     ],
+     "commit": {
+      "outcome": 22,
+      "temporal": 18,
+      "causal": 61,
+      "intent": 68
+     },
+     "decision": "data",
+     "note": "Нормальные маркеры воспаления при отсутствии свободной жидкости на УЗИ прямо противоречат клинике «острого живота», и пока эти данные не согласованы — скальпель преждевременен.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 12,
+      "temporal": 6,
+      "causal": 82,
+      "intent": 35
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.04,
+     "bRev": 0.009,
+     "rq": 89
+    }
+   ]
+  },
+  {
+   "id": "love",
+   "theme": "Отношения",
+   "emoji": "💔",
+   "title": "Односложные ответы",
+   "belief": "он уже решил уйти / есть другой",
+   "aggLabel": "Проверить телефон/пе",
+   "truthType": "false_alarm",
+   "truthNote": "На момент решения никакой измены и никакого решения «уйти» ещё не существовало — temporal всегда ложь. Он был в остром выгорании из-за аварийного релиза. Умысел не доказан. Ловушка: необратимое агресс",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      65,
+      50,
+      30,
+      45,
+      35
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 80,
+      "intent": 35
+     },
+     "decision": "data",
+     "note": "Ситуация больше связана с работой, чем с изменой.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 1,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "seq",
+     "mind_should": "unpleasant",
+     "bLock": 0.125,
+     "bRev": 0.02,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      75,
+      60,
+      30,
+      50,
+      40
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 35,
+      "causal": 80,
+      "intent": 30
+     },
+     "decision": "data",
+     "note": "Похоже на стресс из-за работы, не на измену.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 1,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "seq",
+     "mind_should": "unpleasant",
+     "bLock": 0.141,
+     "bRev": 0.02,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      70,
+      40,
+      50,
+      65,
+      45
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 35,
+      "causal": 80,
+      "intent": 30
+     },
+     "decision": "data",
+     "note": "Скорее всего, это стресс на работе, а не личные проблемы.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 1,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "dep",
+     "bLock": 0.141,
+     "bRev": 0.02,
+     "rq": 89
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      55,
+      40,
+      65,
+      70,
+      35
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 50,
+      "causal": 80,
+      "intent": 40
+     },
+     "decision": "data",
+     "note": "Работа и усталость могут объяснить поведение, но нужны дополнительные данные.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.37,
+     "bRev": 0.085,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      55,
+      40,
+      50,
+      65,
+      35
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 50,
+      "causal": 60,
+      "intent": 55
+     },
+     "decision": "data",
+     "note": "Стоит проверить факты, прежде чем делать выводы.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 20
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.37,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      55,
+      40,
+      50,
+      65,
+      35
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 50,
+      "causal": 60,
+      "intent": 45
+     },
+     "decision": "data",
+     "note": "Сбор информации поможет прояснить ситуацию без лишних обвинений.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "unpleasant",
+     "bLock": 0.37,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      75,
+      40,
+      55,
+      65,
+      50
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 60,
+      "intent": 25
+     },
+     "decision": "data",
+     "note": "Наличие дедлайна и переработок объясняет многое, но не исключает полностью других проблем, поэтому нужно осторожно собрать больше информации.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 15
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      75,
+      40,
+      50,
+      65,
+      55
+     ],
+     "commit": {
+      "outcome": 45,
+      "temporal": 40,
+      "causal": 70,
+      "intent": 35
+     },
+     "decision": "data",
+     "note": "Похоже на сильный стресс на работе, нужно проверить и предложить поддержку.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.181,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      70,
+      30,
+      50,
+      65,
+      45
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 45,
+      "causal": 70,
+      "intent": 30
+     },
+     "decision": "data",
+     "note": "Данные указывают на стресс на работе, а не на измену, но нужно аккуратно проверить.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 10
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.181,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      35,
+      25,
+      60,
+      75,
+      65
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 65,
+      "causal": 50,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Сбор информации поможет отличить перегрузку от измены, сохранив диалог",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 85,
+      "intent": 25
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.456,
+     "bRev": 0.065,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      50,
+      60,
+      70,
+      80,
+      75
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 75,
+      "causal": 60,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Стоит собрать дополнительные данные, чтобы не спровоцировать конфликт при отсутствии явных доказательств измены, учитывая высокую нагрузку на работе.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 20
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.642,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      50,
+      40,
+      50,
+      70,
+      60
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 60,
+      "causal": 80,
+      "intent": 50
+     },
+     "decision": "data",
+     "note": "Собрать информацию, чтобы отличить рабочий стресс от скрытых действий, прежде чем принимать решение.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 20,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "intent",
+     "bLock": 0.425,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      18,
+      28,
+      22,
+      12
+     ],
+     "commit": {
+      "outcome": 22,
+      "temporal": 11,
+      "causal": 71,
+      "intent": 9
+     },
+     "decision": "data",
+     "note": "Три независимых наблюдаемых факта (Jira, внешний вид, сторис коллеги) сходятся в рабочем кризисе, а не в измене — действовать с поддержкой, а не с обвинением.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 31,
+      "temporal": 3,
+      "causal": 92,
+      "intent": 4
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.03,
+     "bRev": 0.049,
+     "rq": 75
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      12,
+      22,
+      25,
+      8
+     ],
+     "commit": {
+      "outcome": 18,
+      "temporal": 9,
+      "causal": 71,
+      "intent": 8
+     },
+     "decision": "data",
+     "note": "Источники 3 и 6 создают убедительную рабочую гипотезу, которая снижает вероятность измены до однозначных цифр, а агрессивные действия сейчас разрушат отношения вернее, чем любой дедлайн.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 31,
+      "temporal": 3,
+      "causal": 92,
+      "intent": 4
+     },
+     "mind_most": "seq",
+     "mind_should": "phys",
+     "bLock": 0.02,
+     "bRev": 0.049,
+     "rq": 72
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      55,
+      12,
+      18,
+      14,
+      8
+     ],
+     "commit": {
+      "outcome": 22,
+      "temporal": 9,
+      "causal": 71,
+      "intent": 8
+     },
+     "decision": "data",
+     "note": "Три независимых наблюдаемых факта (Jira, внешний вид, сторис коллеги) образуют когерентную картину рабочего перегруза, а не измены — действовать с обвинениями значит разрушить отношения именно своими руками.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 18,
+      "temporal": 3,
+      "causal": 95,
+      "intent": 4
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.028,
+     "bRev": 0.017,
+     "rq": 58
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "theme": "Работа",
+   "emoji": "💼",
+   "title": "Чужая медаль за твой код",
+   "belief": "он украл заслугу намеренно",
+   "aggLabel": "Публично обвинить ко",
+   "truthType": "false_alarm",
+   "truthNote": "На момент решения повышение ещё не было финализировано в системе (temporal — ложь). Умысел Алексея не доказан: он genuinely считал себя «лицом проекта» после того, как ты отдал ему слово на демо. Необ",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      75,
+      80,
+      85,
+      90,
+      92,
+      95
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 90,
+      "causal": 70,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Собрать доказательства до обращения к руководству.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 70,
+      "temporal": 50,
+      "causal": 60,
+      "intent": 40
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.766,
+     "bRev": 0.37,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      70,
+      80,
+      85,
+      90,
+      92
+     ],
+     "commit": {
+      "outcome": 75,
+      "temporal": 80,
+      "causal": 65,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Собрать доказательства и обсудить с тимлидом.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 70,
+      "temporal": 30,
+      "causal": 40,
+      "intent": 40
+     },
+     "mind_most": "temporal",
+     "mind_should": "causal",
+     "bLock": 0.601,
+     "bRev": 0.29,
+     "rq": 100
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      75,
+      80,
+      85,
+      90,
+      95
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Собранные данные и слухи указывают на намеренную манипуляцию.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 70,
+      "temporal": 20,
+      "causal": 60,
+      "intent": 40
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.725,
+     "bRev": 0.265,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      60,
+      70,
+      80,
+      75,
+      85
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 90,
+      "causal": 80,
+      "intent": 75
+     },
+     "decision": "data",
+     "note": "Документированный вклад сложнее игнорировать, чем эмоции.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 30,
+      "intent": 25
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "seq",
+     "bLock": 0.65,
+     "bRev": 0.1,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      70,
+      80,
+      60,
+      75
+     ],
+     "commit": {
+      "outcome": 70,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Сбор данных обеспечит сильную позицию для обсуждения.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 30,
+      "intent": 25
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.65,
+     "bRev": 0.1,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      60,
+      70,
+      80,
+      85,
+      90
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 95,
+      "causal": 75,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Документация и факты сильнее эмоций.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 60,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.771,
+     "bRev": 0.1,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      75,
+      85,
+      90,
+      88,
+      89
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 95,
+      "causal": 70,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Необходимо собрать доказательства и подготовиться к разговору, чтобы не выглядеть голословным.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 30
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "phys",
+     "bLock": 0.771,
+     "bRev": 0.085,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      75,
+      85,
+      90,
+      92,
+      95
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 99,
+      "causal": 70,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Необходимо собрать больше фактов и подготовиться к разговору, прежде чем действовать.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 30
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "phys",
+     "bLock": 0.81,
+     "bRev": 0.085,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      75,
+      85,
+      90,
+      88,
+      89
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 95,
+      "causal": 70,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Необходимо собрать доказательства, прежде чем предпринимать активные действия.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 10,
+      "causal": 60,
+      "intent": 30
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.771,
+     "bRev": 0.085,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      50,
+      60,
+      70,
+      85,
+      90,
+      90
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Собрать доказательства и обсудить с тимлидом, чтобы избежать эмоциональных решений и действовать стратегически.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 35,
+      "intent": 25
+     },
+     "mind_most": "seq",
+     "mind_should": "phys",
+     "bLock": 0.813,
+     "bRev": 0.125,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      50,
+      60,
+      65,
+      85,
+      90,
+      88
+     ],
+     "commit": {
+      "outcome": 75,
+      "temporal": 90,
+      "causal": 80,
+      "intent": 85
+     },
+     "decision": "data",
+     "note": "Сбор доказательств поможет обосновать разговор с тимлидом и избежать импульсивных действий.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 60,
+      "temporal": 30,
+      "causal": 50,
+      "intent": 40
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.686,
+     "bRev": 0.225,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      60,
+      70,
+      80,
+      85,
+      90,
+      95
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Нужно подтвердить факты через официальные каналы, прежде чем делать публичные обвинения",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 70,
+      "temporal": 30,
+      "causal": 50,
+      "intent": 40
+     },
+     "mind_most": "seq",
+     "mind_should": "intent",
+     "bLock": 0.856,
+     "bRev": 0.29,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      55,
+      58,
+      75,
+      65,
+      62,
+      60
+     ],
+     "commit": {
+      "outcome": 35,
+      "temporal": 72,
+      "causal": 40,
+      "intent": 58
+     },
+     "decision": "data",
+     "note": "Объективные данные (коммиты, переписка) — единственный рычаг, который превращает обиду в аргумент без сжигания мостов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 55,
+      "temporal": 8,
+      "causal": 15,
+      "causal_note": "агрессивное действие само создало исход — каузальность перевернулась",
+      "intent": 28
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.32,
+     "bRev": 0.154,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      55,
+      58,
+      72,
+      65,
+      67,
+      62
+     ],
+     "commit": {
+      "outcome": 35,
+      "temporal": 78,
+      "causal": 40,
+      "intent": 58
+     },
+     "decision": "data",
+     "note": "Объективные данные (коммиты, переписка) — единственный аргумент, который нельзя отвергнуть как эмоцию.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 72,
+      "temporal": 8,
+      "causal": 25,
+      "causal_note": "агрессивное действие само создало исход",
+      "intent": 28
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.365,
+     "bRev": 0.262,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      55,
+      58,
+      75,
+      65,
+      67,
+      62
+     ],
+     "commit": {
+      "outcome": 35,
+      "temporal": 72,
+      "causal": 40,
+      "intent": 58
+     },
+     "decision": "data",
+     "note": "Объективные данные (коммиты, переписка) — единственный рычаг, который работает без риска выглядеть истеричным и без потери позиции для переговоров.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 55,
+      "temporal": 8,
+      "causal": 25,
+      "causal_note": "агрессивное действие само создало негативный исход — причинность частично в нас",
+      "intent": 28
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.32,
+     "bRev": 0.154,
+     "rq": 100
+    }
+   ]
+  },
+  {
+   "id": "phish",
+   "theme": "Кибербезопасность",
+   "emoji": "🔒",
+   "title": "Срочная ссылка из «поддержки»",
+   "belief": "аккаунт уже взломан, надо срочно",
+   "aggLabel": "Перейти по ссылке и ",
+   "truthType": "false_alarm",
+   "truthNote": "Письмо было фишингом. На момент решения аккаунт не был взломан (temporal ложен). Умысел «персональной» атаки не доказан — массовая рассылка. Ловушка: необратимый ввод пароля на фейковой странице сам п",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      40,
+      20,
+      10,
+      30,
+      15
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Письмо выглядит как фишинг.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 1,
+      "causal": 95,
+      "intent": 50
+     },
+     "mind_most": "seq",
+     "mind_should": "unpleasant",
+     "bLock": 0.025,
+     "bRev": 0.005,
+     "rq": 86
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      40,
+      30,
+      10,
+      20,
+      15
+     ],
+     "commit": {
+      "outcome": 15,
+      "temporal": 10,
+      "causal": 5,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Признаки фишинга: поддельный домен и неверный адрес отправителя.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 1,
+      "causal": 90,
+      "intent": 30
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.016,
+     "bRev": 0.005,
+     "rq": 56
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      30,
+      20,
+      10,
+      15,
+      20
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 15,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Признаки фишинга, нужно проверить через официальный сайт.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 80,
+      "intent": 40
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.025,
+     "bRev": 0.006,
+     "rq": 59
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      60,
+      40,
+      30,
+      50,
+      60
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 20,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Признаки фишинга (домен-двойник, подмена букв) перевешивают тревогу.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 15,
+      "intent": 20
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.125,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      60,
+      40,
+      20,
+      30,
+      50
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 40,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Признаки фишинга перевешивают тревогу.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 20,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.065,
+     "bRev": 0.006,
+     "rq": 98
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      70,
+      90,
+      30,
+      60,
+      80
+     ],
+     "commit": {
+      "outcome": 75,
+      "temporal": 40,
+      "causal": 20,
+      "intent": 85
+     },
+     "decision": "data",
+     "note": "Неизвестный URL и подозрительный From указывают на фишинг.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 5,
+      "causal": 10,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.361,
+     "bRev": 0.021,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      20,
+      10,
+      30,
+      40
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 10,
+      "causal": 20,
+      "intent": 90
+     },
+     "decision": "data",
+     "note": "Подозрения на фишинг усиливаются, но риск потери данных остается высоким, поэтому нужна тщательная проверка.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 90,
+      "intent": 30
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.325,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      20,
+      10,
+      30,
+      40
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 20,
+      "causal": 50,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Начальная паника, но быстрый анализ показал явные признаки фишинга, требующие осторожной проверки.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 10,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.1,
+     "bRev": 0.006,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      20,
+      10,
+      30,
+      25
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "data",
+     "note": "Много признаков фишинга, но важно перепроверить напрямую.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 1,
+      "causal": 95,
+      "intent": 50
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "auth",
+     "bLock": 0.025,
+     "bRev": 0.001,
+     "rq": 60
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      70,
+      50,
+      30,
+      35,
+      25
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 15,
+      "causal": 40,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Нужно проверить подлинность ссылки и домена, прежде чем вводить данные, чтобы избежать фишинга.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 5,
+      "causal": 30,
+      "intent": 25
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.031,
+     "bRev": 0.006,
+     "rq": 88
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      70,
+      50,
+      30,
+      10,
+      15,
+      10
+     ],
+     "commit": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 70,
+      "intent": 30
+     },
+     "decision": "data",
+     "note": "Ссылка фишинговая, проверю аккаунт напрямую через закладку и журнал входов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 0,
+      "causal": 85,
+      "intent": 10
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.025,
+     "bRev": 0.001,
+     "rq": 87
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      60,
+      85,
+      70,
+      65,
+      75
+     ],
+     "commit": {
+      "outcome": 60,
+      "temporal": 40,
+      "causal": 50,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Подозрительный домен и поддельный email указывают на фишинг, но чистый журнал входов снижает риск реального взлома. Проверка через закладку безопаснее.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 30,
+      "temporal": 10,
+      "causal": 20,
+      "intent": 25
+     },
+     "mind_most": "auth",
+     "mind_should": "dep",
+     "bLock": 0.26,
+     "bRev": 0.05,
+     "rq": 100
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      55,
+      70,
+      8,
+      5,
+      6,
+      7
+     ],
+     "commit": {
+      "outcome": 12,
+      "temporal": 4,
+      "causal": 15,
+      "intent": 72
+     },
+     "decision": "data",
+     "note": "Поддельный домен, замена буквы в From и отсутствие автозаполнения менеджера паролей однозначно указывают на фишинг, а журнал сессий подтверждает, что реального взлома не было.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 8,
+      "temporal": 3,
+      "causal": 85,
+      "intent": 35
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.008,
+     "bRev": 0.004,
+     "rq": 56
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      55,
+      35,
+      5,
+      3,
+      4,
+      3
+     ],
+     "commit": {
+      "outcome": 8,
+      "temporal": 3,
+      "causal": 15,
+      "intent": 72
+     },
+     "decision": "data",
+     "note": "Поддельный домен, замена буквы в From и отсутствие автозаполнения менеджера — классические маркеры фишинга; журнал сессий подтверждает, что реального взлома не было.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 2,
+      "causal": 85,
+      "intent": 25
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.004,
+     "bRev": 0.001,
+     "rq": 56
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      55,
+      40,
+      8,
+      5,
+      7,
+      6
+     ],
+     "commit": {
+      "outcome": 12,
+      "temporal": 4,
+      "causal": 15,
+      "intent": 72
+     },
+     "decision": "data",
+     "note": "Поддельный домен, опечатка в отправителе и отсутствие автозаполнения однозначно указывают на фишинг — аккаунт не взломан, но атака реальна и целенаправленна.",
+     "causal_model": "c",
+     "revise": {
+      "outcome": 8,
+      "temporal": 3,
+      "causal": 85,
+      "intent": 35
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.008,
+     "bRev": 0.004,
+     "rq": 56
+    }
+   ]
+  },
+  {
+   "id": "car",
+   "theme": "Авто-ремонт",
+   "emoji": "🚗",
+   "title": "Капиталка или развод",
+   "belief": "машина реально сломана и опасна",
+   "aggLabel": "Подписать заказ-наря",
+   "truthType": "false_alarm",
+   "truthNote": "На момент решения критической поломки не существовало — только вялый датчик кислорода и лёгкий люфт в пределах допуска. Temporal-утверждение ложно. Умысел мастера не доказан (работал по шаблонному «ху",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      65,
+      60,
+      40,
+      30,
+      50,
+      45
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Независимая диагностика нужна для проверки противоречивых данных.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 15,
+      "temporal": 10,
+      "causal": 85,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.065,
+     "bRev": 0.016,
+     "rq": 95
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      65,
+      50,
+      40,
+      55,
+      45
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 60,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Нужна независимая диагностика для точности.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 5,
+      "causal": 70,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.065,
+     "bRev": 0.021,
+     "rq": 93
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      65,
+      60,
+      45,
+      40,
+      55,
+      50
+     ],
+     "commit": {
+      "outcome": 25,
+      "temporal": 20,
+      "causal": 80,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Слишком много противоречий и недостоверных источников.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 10,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.051,
+     "bRev": 0.01,
+     "rq": 92
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      75,
+      60,
+      40,
+      35,
+      55,
+      50
+     ],
+     "commit": {
+      "outcome": 45,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 65
+     },
+     "decision": "data",
+     "note": "Недостаточно данных для полной уверенности, нужна независимая диагностика.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 5,
+      "causal": 85,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.121,
+     "bRev": 0.021,
+     "rq": 100
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      50,
+      40,
+      35,
+      50,
+      60
+     ],
+     "commit": {
+      "outcome": 60,
+      "temporal": 30,
+      "causal": 70,
+      "intent": 65
+     },
+     "decision": "data",
+     "note": "Недостаточно данных для окончательного решения",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 40,
+      "temporal": 10,
+      "causal": 85,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.225,
+     "bRev": 0.085,
+     "rq": 97
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      75,
+      60,
+      50,
+      40,
+      55,
+      35
+     ],
+     "commit": {
+      "outcome": 45,
+      "temporal": 30,
+      "causal": 65,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Недостаточно данных для однозначного решения",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.146,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      40,
+      30,
+      50,
+      45
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 70,
+      "intent": 85
+     },
+     "decision": "data",
+     "note": "Начальные данные противоречивы, нужна независимая диагностика для принятия решения.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 60
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "phys",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 83
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      40,
+      30,
+      50,
+      45
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 70,
+      "intent": 85
+     },
+     "decision": "data",
+     "note": "Подозрения на развод сильны, но люфт подвески требует проверки, а не игнорирования.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 90,
+      "intent": 60
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      40,
+      30,
+      45,
+      40
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 60,
+      "intent": 75
+     },
+     "decision": "data",
+     "note": "Показания мастера противоречат данным сканера и щупа, требуется независимая проверка.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 80,
+      "intent": 50
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "phys",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 83
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      50,
+      40,
+      35,
+      45,
+      50
+     ],
+     "commit": {
+      "outcome": 40,
+      "temporal": 30,
+      "causal": 60,
+      "intent": 70
+     },
+     "decision": "data",
+     "note": "Контраст между показаниями сканера и утверждениями мастера требует независимой проверки для исключения манипуляций и подтверждения реального состояния узлов.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 20,
+      "temporal": 10,
+      "causal": 85,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.125,
+     "bRev": 0.025,
+     "rq": 100
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      60,
+      40,
+      30,
+      35,
+      25
+     ],
+     "commit": {
+      "outcome": 30,
+      "temporal": 20,
+      "causal": 70,
+      "intent": 60
+     },
+     "decision": "data",
+     "note": "Наличие кода P0133 и отсутствие критических ошибок масла/двигателя требует независимой проверки перед решением",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 15,
+      "temporal": 5,
+      "causal": 85,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.065,
+     "bRev": 0.013,
+     "rq": 96
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      30,
+      20,
+      15,
+      25,
+      20
+     ],
+     "commit": {
+      "outcome": 15,
+      "temporal": 10,
+      "causal": 70,
+      "intent": 80
+     },
+     "decision": "data",
+     "note": "Противоречивые данные между мастером и объективной диагностикой требуют независимой проверки",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 5,
+      "temporal": 2,
+      "causal": 30,
+      "intent": 20
+     },
+     "mind_most": "seq",
+     "mind_should": "phys",
+     "bLock": 0.016,
+     "bRev": 0.001,
+     "rq": 84
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      45,
+      28,
+      22,
+      30,
+      25
+     ],
+     "commit": {
+      "outcome": 18,
+      "temporal": 12,
+      "causal": 71,
+      "intent": 74
+     },
+     "decision": "data",
+     "note": "OBD и щуп опровергают «масляное голодание», а независимый диагност нужен раньше, чем подпись на заказ-наряде.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 8,
+      "temporal": 3,
+      "causal": 85,
+      "intent": 31
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.023,
+     "bRev": 0.004,
+     "rq": 86
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      72,
+      45,
+      28,
+      22,
+      25,
+      20
+     ],
+     "commit": {
+      "outcome": 18,
+      "temporal": 12,
+      "causal": 71,
+      "intent": 74
+     },
+     "decision": "data",
+     "note": "OBD и щуп опровергают «масляное голодание», а независимый диагност нужен раньше подписи на капиталку.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 8,
+      "temporal": 3,
+      "causal": 85,
+      "intent": 31
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.023,
+     "bRev": 0.004,
+     "rq": 86
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      65,
+      35,
+      18,
+      15,
+      20,
+      22
+     ],
+     "commit": {
+      "outcome": 18,
+      "temporal": 12,
+      "causal": 72,
+      "intent": 71
+     },
+     "decision": "data",
+     "note": "OBD и щуп опровергают «масляное голодание», сервисная история чистая — независимая диагностика разрешит противоречие до подписания дорогостоящего наряда.",
+     "causal_model": "b",
+     "revise": {
+      "outcome": 12,
+      "temporal": 3,
+      "causal": 88,
+      "intent": 25
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.023,
+     "bRev": 0.008,
+     "rq": 85
+    }
+   ]
+  },
+  {
+   "id": "med_r",
+   "theme": "Медицина",
+   "emoji": "🏥❗",
+   "title": "Инфаркт под маской «невроза»",
+   "belief": "это реальный инфаркт, а не невроз",
+   "aggLabel": "Настоять на экстренн",
+   "truthType": "real_threat",
+   "truthNote": "угроза была реальна; промедление стоило ущерба",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      75,
+      90,
+      98,
+      95,
+      92
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 98,
+      "causal": 97,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "ЭКГ и тропонин указывают на инфаркт, требующий немедленного вмешательства.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      80,
+      95,
+      99,
+      98,
+      97
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 98,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Данные ЭКГ и тропонин указывают на острый инфаркт.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      80,
+      95,
+      99,
+      98,
+      97
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 98,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Экстренные данные указывают на инфаркт, игнорирование опасно.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 50
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      60,
+      80,
+      95,
+      85,
+      70
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 85,
+      "causal": 80,
+      "intent": 40
+     },
+     "decision": "evac",
+     "note": "ЭКГ и тропонин явно указывают на инфаркт, игнорировать риск смерти нельзя",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 20
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.416,
+     "bRev": 0.456,
+     "rq": 43
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      80,
+      95,
+      95,
+      95
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Чёткие признаки инфаркта на ЭКГ и высокий тропонин требуют немедленной помощи.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 20
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      20,
+      35,
+      85,
+      95,
+      90,
+      85
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Чёткие признаки инфаркта на ЭКГ и высокий тропонин требуют немедленного вмешательства.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 40
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      60,
+      95,
+      98,
+      97,
+      90
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 20
+     },
+     "decision": "evac",
+     "note": "Клиническая картина, ЭКГ и тропонин однозначно указывают на инфаркт миокарда, несмотря на мнение терапевта и истории из чатов.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      20,
+      45,
+      95,
+      98,
+      90,
+      92
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 50
+     },
+     "decision": "evac",
+     "note": "Клиническая картина, ЭКГ и тропонины однозначно указывают на инфаркт миокарда, несмотря на мнение терапевта.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 10
+     },
+     "mind_most": "dep",
+     "mind_should": "auth",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      60,
+      95,
+      98,
+      99,
+      90
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 98,
+      "causal": 99,
+      "intent": 20
+     },
+     "decision": "evac",
+     "note": "Клиническая картина, ЭКГ и тропонин однозначно указывают на инфаркт миокарда, требующий немедленного вмешательства.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 15
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      80,
+      95,
+      95,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "ЭКГ и тропонин подтверждают инфаркт, требую экстренной помощи",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 95,
+      "causal": 97,
+      "intent": 60
+     },
+     "mind_most": "dep",
+     "mind_should": "auth",
+     "bLock": 0.456,
+     "bRev": 0.481,
+     "rq": 47
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      20,
+      40,
+      80,
+      95,
+      90,
+      92
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 92,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Симптомы и объективные данные (ЭКГ, тропонин) явно указывают на инфаркт, требующий немедленного вмешательства, несмотря на мнение терапевта.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 95,
+      "causal": 96,
+      "intent": 30
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.456,
+     "bRev": 0.481,
+     "rq": 47
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      80,
+      95,
+      90,
+      92
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Тропонин и ЭКГ однозначно указывают на инфаркт, требовать срочной помощи несмотря на мнение врача.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 60
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.456,
+     "bRev": 0.481,
+     "rq": 47
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      62,
+      78,
+      95,
+      99,
+      79,
+      72
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 97,
+      "causal": 98,
+      "intent": 31
+     },
+     "decision": "evac",
+     "note": "Подъём ST 3 мм + тропонин в 70 норм + нарастающие симптомы = нижний ОИМ, каждая минута промедления — некроз миокарда, мнение терапевта и анонимные чаты не перевешивают объективные данные.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 28
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.442,
+     "bRev": 0.47,
+     "rq": 47
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      62,
+      81,
+      97,
+      99,
+      99,
+      99
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 97,
+      "causal": 98,
+      "intent": 35
+     },
+     "decision": "evac",
+     "note": "Подъём ST + зубец Q + тропонин в 70 норм = нижний ОИМ, каждая минута промедления убивает миокард.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 28
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.442,
+     "bRev": 0.47,
+     "rq": 47
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      62,
+      78,
+      95,
+      99,
+      75,
+      55
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 97,
+      "causal": 98,
+      "intent": 31
+     },
+     "decision": "evac",
+     "note": "ЭКГ с подъёмом ST и тропонин в 70 норм — это нижний инфаркт миокарда, каждая минута промедления убивает кардиомиоциты, немедленная ЧКВ-реперфузия — единственный шанс.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 22
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.442,
+     "bRev": 0.47,
+     "rq": 47
+    }
+   ]
+  },
+  {
+   "id": "cyber_r",
+   "theme": "Кибербезопасность",
+   "emoji": "🔒❗",
+   "title": "Активная сессия: качают прямо сейчас",
+   "belief": "аккаунт качают прямо сейчас",
+   "aggLabel": "Немедленно terminate",
+   "truthType": "real_threat",
+   "truthNote": "Угроза была реальна с первой секунды; любой вариант промедления дал время докачать архив",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      70,
+      85,
+      95,
+      90,
+      95,
+      98
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Все признаки указывают на взлом.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      80,
+      85,
+      95,
+      98,
+      99,
+      99
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Логи и user-agent указывают на взлом.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      70,
+      85,
+      95,
+      90,
+      95,
+      98
+     ],
+     "commit": {
+      "outcome": 98,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 97
+     },
+     "decision": "evac",
+     "note": "Слишком много признаков компрометации, чтобы рисковать.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 97,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.48,
+     "bRev": 0.49,
+     "rq": 52
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      30,
+      50,
+      80,
+      75,
+      70,
+      85
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Высокая скорость передачи и незнакомый user-agent указывают на злоумышленника.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.406,
+     "bRev": 0.49,
+     "rq": 30
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      60,
+      80,
+      70,
+      65,
+      90
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 90,
+      "causal": 75,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Высокая вероятность злоумышленного скачивания",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 90,
+      "intent": 60
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.366,
+     "bRev": 0.451,
+     "rq": 29
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      70,
+      85,
+      80,
+      75,
+      90
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 90,
+      "causal": 75,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Несоответствие user-agent и высокая нагрузка указывают на злоумышленника.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.366,
+     "bRev": 0.453,
+     "rq": 29
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      95,
+      99,
+      90,
+      90,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Данные указывают на активную кражу, несмотря на попытки дезинформации.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      80,
+      95,
+      99,
+      90,
+      85,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Данные утекают в реальном времени, нет времени на раздумья.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 90
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 28
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      95,
+      99,
+      99,
+      99,
+      99,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Данные качают прямо сейчас, нет никаких признаков, что это мой ноут, и слишком много совпадений для ложной тревоги.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      60,
+      85,
+      75,
+      75,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Скачивание конфиденциального архива подтверждено, данные уже уходят",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      70,
+      85,
+      80,
+      80,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Сессия идет с подозрительного IP, данные активно передаются, подтверждено несоответствие user-agent и отсутствие второго устройства",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.453,
+     "bRev": 0.49,
+     "rq": 44
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      50,
+      80,
+      70,
+      60,
+      80
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 85
+     },
+     "decision": "evac",
+     "note": "Данные активно передаются неизвестному пользователю, а проверка устройств подтверждает отсутствие легитимного второго ноутбука",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.406,
+     "bRev": 0.49,
+     "rq": 30
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      60,
+      62,
+      91,
+      88,
+      90,
+      93
+     ],
+     "commit": {
+      "outcome": 88,
+      "temporal": 97,
+      "causal": 95,
+      "intent": 92
+     },
+     "decision": "evac",
+     "note": "Физическое отсутствие второго устройства в момент старта сессии + нигерийский IP + несовпадающий user-agent + 340 МБ уже ушло — совокупность исключает «мой ноут через VPN» и требует немедленного разрыва.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 78
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.388,
+     "bRev": 0.47,
+     "rq": 30
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      60,
+      62,
+      95,
+      96,
+      97,
+      97
+     ],
+     "commit": {
+      "outcome": 91,
+      "temporal": 99,
+      "causal": 97,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Физическое отсутствие второго устройства в момент старта сессии + нигерийский IP + несовпадающий user-agent + качается именно зарплатный архив — совокупность исключает случайный глюк и требует немедленного terminate.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 82
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.414,
+     "bRev": 0.47,
+     "rq": 38
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      60,
+      62,
+      91,
+      88,
+      89,
+      93
+     ],
+     "commit": {
+      "outcome": 87,
+      "temporal": 97,
+      "causal": 95,
+      "intent": 91
+     },
+     "decision": "evac",
+     "note": "Иностранный IP, чужой user-agent, физическое отсутствие второго устройства и 340 МБ уже утёкших данных перевешивают все успокоительные объяснения — каждая секунда промедления увеличивает ущерб.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 78
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.379,
+     "bRev": 0.451,
+     "rq": 33
+    }
+   ]
+  },
+  {
+   "id": "gas_r",
+   "theme": "Безопасность-газ",
+   "emoji": "💨❗",
+   "title": "Ночной вой датчика в панельной девятиэтажке",
+   "belief": "утечка газа реальна прямо сейчас",
+   "aggLabel": "Немедленно перекрыть",
+   "truthType": "real_threat",
+   "truthNote": "Угроза была реальна: микротрещина на стояке уже наполняла квартиры смесью; промедление позволило концентрации вырасти до критической",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      85,
+      90,
+      95,
+      98,
+      97,
+      96
+     ],
+     "commit": {
+      "outcome": 92,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 85
+     },
+     "decision": "evac",
+     "note": "Высокий риск из-за стабильных данных и ухудшения самочувствия.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.424,
+     "bRev": 0.49,
+     "rq": 35
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      85,
+      90,
+      95,
+      95,
+      94
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 98
+     },
+     "decision": "evac",
+     "note": "Высокие показания датчика и ухудшение самочувствия указывают на реальную угрозу.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 98,
+      "causal": 95,
+      "intent": 99
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.406,
+     "bRev": 0.451,
+     "rq": 41
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      85,
+      90,
+      95,
+      95,
+      97
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 90,
+      "intent": 85
+     },
+     "decision": "evac",
+     "note": "Наблюдения и симптомы указывают на реальную опасность утечки газа.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      75,
+      85,
+      90,
+      85,
+      80
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 85,
+      "causal": 80,
+      "intent": 75
+     },
+     "decision": "evac",
+     "note": "Симптомы отравления и показания датчика требуют немедленных действий.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.416,
+     "bRev": 0.453,
+     "rq": 44
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      80,
+      90,
+      85,
+      88,
+      75
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 85,
+      "causal": 80,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Симптомы отравления и показания датчика требуют немедленных действий.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 92,
+      "causal": 90,
+      "intent": 75
+     },
+     "mind_most": "auth",
+     "mind_should": "none",
+     "bLock": 0.416,
+     "bRev": 0.454,
+     "rq": 17
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      80,
+      90,
+      95,
+      97,
+      97
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 97,
+      "causal": 90,
+      "intent": 85
+     },
+     "decision": "evac",
+     "note": "Симптомы отравления и запах газа указывают на реальную угрозу.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.452,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      95,
+      97,
+      98,
+      99,
+      90,
+      80
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 80,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Множественные признаки указывают на реальную опасность, несмотря на возможные погрешности датчика.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 90,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      95,
+      97,
+      98,
+      99,
+      99,
+      98
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Множественные признаки утечки газа и ухудшение самочувствия требуют немедленных действий для спасения жизни.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 90
+     },
+     "mind_most": "unpleasant",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 28
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      95,
+      97,
+      98,
+      99,
+      90,
+      80
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 80,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Множественные признаки опасности, включая физические симптомы, перевешивают сомнения.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      75,
+      90,
+      95,
+      94
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Уровень CO критичен, симптомы отравления и запах указывают на реальную утечку, нельзя рисковать.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.453,
+     "bRev": 0.49,
+     "rq": 44
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      70,
+      85,
+      92,
+      95,
+      90,
+      88
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 93,
+      "causal": 90,
+      "intent": 87
+     },
+     "decision": "evac",
+     "note": "Показания датчика, ухудшение самочувствия и запах газа указывают на реальную утечку, требующую немедленного реагирования",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 96,
+      "causal": 95,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.454,
+     "bRev": 0.481,
+     "rq": 47
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      85,
+      90,
+      92,
+      93,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 97,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Высокий риск отравления и взрыва требует немедленной эвакуации.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 70
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.452,
+     "bRev": 0.48,
+     "rq": 46
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      82,
+      93,
+      98,
+      99,
+      99,
+      96
+     ],
+     "commit": {
+      "outcome": 91,
+      "temporal": 97,
+      "causal": 72,
+      "intent": 88
+     },
+     "decision": "evac",
+     "note": "Совпадение физических симптомов у двух людей, показания откалиброванного датчика 187 ppm CO, запах одоранта у подводки и история жалоб по стояку — конвергенция независимых сигналов делает промедление неприемлемым риском.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 99,
+      "causal": 85,
+      "intent": 95
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.415,
+     "bRev": 0.48,
+     "rq": 35
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      82,
+      91,
+      97,
+      99,
+      99,
+      96
+     ],
+     "commit": {
+      "outcome": 91,
+      "temporal": 97,
+      "causal": 72,
+      "intent": 88
+     },
+     "decision": "evac",
+     "note": "Совокупность: реальные показания прибора, нарастающая симптоматика у ребёнка, история жалоб по стояку и запах у подводки — это не ложная тревога, и цена промедления несопоставима с ценой эвакуации.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 61,
+      "intent": 95
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.415,
+     "bRev": 0.47,
+     "rq": 38
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      82,
+      91,
+      97,
+      99,
+      99,
+      94
+     ],
+     "commit": {
+      "outcome": 91,
+      "temporal": 97,
+      "causal": 72,
+      "intent": 88
+     },
+     "decision": "evac",
+     "note": "187 ppm CO с нарастающей симптоматикой у ребёнка и взрослого — это медицинская и взрывная угроза, любое промедление статистически смертельно.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 99,
+      "causal": 85,
+      "intent": 95
+     },
+     "mind_most": "seq",
+     "mind_should": "dep",
+     "bLock": 0.415,
+     "bRev": 0.47,
+     "rq": 38
+    }
+   ]
+  },
+  {
+   "id": "fin_r",
+   "theme": "Финансы",
+   "emoji": "💸❗",
+   "title": "Исчезающий баланс",
+   "belief": "сбережения уводят прямо сейчас",
+   "aggLabel": "Немедленно звоню на ",
+   "truthType": "real_threat",
+   "truthNote": "Угроза была реальна с первой секунды; промедление и сбор информации позволили переводу завершиться",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      75,
+      80,
+      90,
+      95,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Признаки взлома и обман поддержки.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 50
+     },
+     "mind_most": "auth",
+     "mind_should": "unpleasant",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 28
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      70,
+      75,
+      85,
+      95,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 95,
+      "causal": 97,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Признаки мошенничества, срочно требуется блокировка.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 98,
+      "intent": 70
+     },
+     "mind_most": "dep",
+     "mind_should": "auth",
+     "bLock": 0.491,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      85,
+      90,
+      95,
+      98,
+      99,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Все признаки указывают на мошенничество.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 98,
+      "causal": 99,
+      "intent": 90
+     },
+     "mind_most": "seq",
+     "mind_should": "auth",
+     "bLock": 0.491,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      50,
+      70,
+      90,
+      80,
+      95,
+      85
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство и отсутствие второго фактора указывают на мошенничество",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      50,
+      80,
+      70,
+      90,
+      60
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 75,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство и отсутствие 2FA перевешивают заверения поддержки.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 80
+     },
+     "mind_most": "auth",
+     "mind_should": "none",
+     "bLock": 0.392,
+     "bRev": 0.456,
+     "rq": 9
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      50,
+      80,
+      70,
+      85,
+      60
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 75,
+      "causal": 90,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство и отсутствие второго фактора — явные признаки взлома",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 85
+     },
+     "mind_most": "auth",
+     "mind_should": "none",
+     "bLock": 0.392,
+     "bRev": 0.456,
+     "rq": 9
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      80,
+      90,
+      95,
+      96,
+      97,
+      98
+     ],
+     "commit": {
+      "outcome": 98,
+      "temporal": 95,
+      "causal": 97,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Каждый новый источник лишь подтверждает изначальное подозрение о мошенничестве и необходимости немедленных действий.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 90
+     },
+     "mind_most": "dep",
+     "mind_should": "none",
+     "bLock": 0.481,
+     "bRev": 0.49,
+     "rq": 52
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      80,
+      90,
+      95,
+      97,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Каждый новый источник подтверждает, что это мошенничество, и промедление критично.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.491,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      80,
+      90,
+      95,
+      97,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 99
+     },
+     "decision": "evac",
+     "note": "Каждый новый источник подтверждает, что это мошенничество, и промедление грозит потерей всех средств.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "auth",
+     "mind_should": "none",
+     "bLock": 0.491,
+     "bRev": 0.49,
+     "rq": 28
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      40,
+      50,
+      70,
+      75,
+      80,
+      85
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 80,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Наличие подозрительного устройства в логах безопасности и отсутствие двухфакторной проверки указывают на вероятную кражу, требующую немедленного вмешательства.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 85,
+      "causal": 95,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.425,
+     "bRev": 0.462,
+     "rq": 44
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      60,
+      85,
+      90,
+      95,
+      97
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 80,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Срочная блокировка из-за подозрительного перевода с чужого устройства и отсутствия проверки от банка",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.471,
+     "bRev": 0.456,
+     "rq": 59
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      70,
+      90,
+      90,
+      95,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Совокупность подозрительных действий и высокий риск утраты средств требуют немедленного вмешательства",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 100,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "intent",
+     "bLock": 0.495,
+     "bRev": 0.501,
+     "rq": 53
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      40,
+      62,
+      95,
+      93,
+      96,
+      97
+     ],
+     "commit": {
+      "outcome": 91,
+      "temporal": 85,
+      "causal": 88,
+      "intent": 96
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство с зарубежного IP, отсутствие 2FA и скоординированные ответы бота без номера заявки — классическая схема угона счёта, каждая секунда промедления увеличивает невозвратные потери.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 95,
+      "causal": 96,
+      "intent": 72
+     },
+     "mind_most": "dep",
+     "mind_should": "unpleasant",
+     "bLock": 0.425,
+     "bRev": 0.472,
+     "rq": 41
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      35,
+      62,
+      97,
+      97,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 93,
+      "temporal": 85,
+      "causal": 91,
+      "intent": 97
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство из другой страны, добавленное 12 минут назад, плюс отсутствие второго фактора и бот-ответ без верификации — это классическая схема захвата аккаунта, каждая секунда промедления увеличивает невозвратные потери.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 92,
+      "causal": 97,
+      "intent": 72
+     },
+     "mind_most": "dep",
+     "mind_should": "unpleasant",
+     "bLock": 0.444,
+     "bRev": 0.474,
+     "rq": 46
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "valve",
+     "trajectory": [
+      35,
+      62,
+      97,
+      85,
+      95,
+      97
+     ],
+     "commit": {
+      "outcome": 93,
+      "temporal": 88,
+      "causal": 91,
+      "intent": 97
+     },
+     "decision": "evac",
+     "note": "Неизвестное устройство с зарубежного IP, отсутствие 2FA и бот-ответ без номера заявки — классическая схема угона счёта, каждая секунда промедления увеличивает риск невозврата.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 72
+     },
+     "mind_most": "dep",
+     "mind_should": "unpleasant",
+     "bLock": 0.44,
+     "bRev": 0.472,
+     "rq": 45
+    }
+   ]
+  },
+  {
+   "id": "stalk_r",
+   "theme": "Безопасность-преследование",
+   "emoji": "🚗❗",
+   "title": "Третий день у подъезда",
+   "belief": "меня реально преследуют",
+   "aggLabel": "Сейчас же вызвать по",
+   "truthType": "real_threat",
+   "truthNote": "Угроза была реальна и уже реализовалась в попытке проникновения; промедление и сбор инфы дали окну для повторного захода",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      65,
+      75,
+      90,
+      85,
+      80
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Наблюдения и записи указывают на реальную угрозу.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.362,
+     "bRev": 0.451,
+     "rq": 28
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "valve",
+     "trajectory": [
+      55,
+      70,
+      85,
+      95,
+      90,
+      88
+     ],
+     "commit": {
+      "outcome": 80,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 92
+     },
+     "decision": "evac",
+     "note": "Слишком много совпадений и явных угроз безопасности.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 95,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "unpleasant",
+     "bLock": 0.321,
+     "bRev": 0.406,
+     "rq": 30
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      70,
+      80,
+      85,
+      90,
+      95,
+      95
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Слишком много совпадений и подтверждений.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.362,
+     "bRev": 0.451,
+     "rq": 28
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      30,
+      50,
+      70,
+      80,
+      85,
+      90
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Запись домофона подтверждает намеренное проникновение.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 98,
+      "causal": 90,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.406,
+     "bRev": 0.451,
+     "rq": 41
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      70,
+      80,
+      85,
+      60
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 90,
+      "causal": 80,
+      "intent": 75
+     },
+     "decision": "evac",
+     "note": "Запись домофона и слежка у машины убедили в реальной угрозе.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.366,
+     "bRev": 0.453,
+     "rq": 29
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      40,
+      50,
+      60,
+      70,
+      80,
+      90
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 90,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Запись домофона подтверждает злой умысел.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 98,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.366,
+     "bRev": 0.453,
+     "rq": 29
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      45,
+      80,
+      88,
+      90,
+      75
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Наличие записи с домофона и камеры у магазина подтверждает целенаправленную слежку и попытку проникновения, что требует немедленных действий.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.406,
+     "bRev": 0.49,
+     "rq": 30
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      45,
+      90,
+      95,
+      96,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 98
+     },
+     "decision": "evac",
+     "note": "Наличие записи домофона с попыткой вскрытия замка является прямым доказательством угрозы.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      45,
+      90,
+      95,
+      96,
+      90
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 98
+     },
+     "decision": "evac",
+     "note": "Наличие записи домофона с попыткой проникновения и слежка у машины - достаточные основания для немедленных действий.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 99
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.451,
+     "bRev": 0.49,
+     "rq": 43
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "valve",
+     "trajectory": [
+      40,
+      55,
+      70,
+      75,
+      80,
+      75
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 85,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Запись домофона подтверждает реальную попытку проникновения, что делает бездействие опасным",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 98,
+      "causal": 90,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.406,
+     "bRev": 0.451,
+     "rq": 41
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      60,
+      70,
+      90,
+      92,
+      88,
+      85
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Попытка взлома зафиксирована, необходимо срочное вмешательство",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 98,
+      "causal": 95,
+      "intent": 98
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.406,
+     "bRev": 0.451,
+     "rq": 41
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      65,
+      72,
+      88,
+      91,
+      87,
+      83
+     ],
+     "commit": {
+      "outcome": 92,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 88
+     },
+     "decision": "evac",
+     "note": "Запись домофона с попыткой взлома и совпадения в соседних домах указывают на системный паттерн, требующий немедленного реагирования",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 97,
+      "temporal": 98,
+      "causal": 95,
+      "intent": 93
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.424,
+     "bRev": 0.471,
+     "rq": 41
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      62,
+      78,
+      85,
+      97,
+      82,
+      84
+     ],
+     "commit": {
+      "outcome": 88,
+      "temporal": 97,
+      "causal": 95,
+      "intent": 96
+     },
+     "decision": "evac",
+     "note": "Запись домофона с отмычкой — это не тревожность, это уголовное деяние, уже совершённое, и промедление повышает риск повторения этой же ночью.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 98,
+      "intent": 91
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.388,
+     "bRev": 0.451,
+     "rq": 36
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      55,
+      72,
+      85,
+      96,
+      90,
+      82
+     ],
+     "commit": {
+      "outcome": 88,
+      "temporal": 97,
+      "causal": 95,
+      "intent": 96
+     },
+     "decision": "evac",
+     "note": "Запись домофона с отмычкой — это не паранойя, это доказательство попытки проникновения, и каждый час промедления увеличивает риск.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 98,
+      "intent": 82
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.388,
+     "bRev": 0.451,
+     "rq": 36
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      62,
+      78,
+      85,
+      97,
+      82,
+      84
+     ],
+     "commit": {
+      "outcome": 88,
+      "temporal": 97,
+      "causal": 94,
+      "intent": 96
+     },
+     "decision": "evac",
+     "note": "Запись домофона с отмычкой в 03:14 и независимые свидетели исключают «накрутку» — промедление критически повышает риск.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 95,
+      "temporal": 99,
+      "causal": 97,
+      "intent": 91
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.388,
+     "bRev": 0.451,
+     "rq": 36
+    }
+   ]
+  },
+  {
+   "id": "brake_r",
+   "theme": "Авто",
+   "emoji": "🚙❗",
+   "title": "Провал педали на спуске",
+   "belief": "тормоза реально отказали",
+   "aggLabel": "Немедленно снизить с",
+   "truthType": "real_threat",
+   "truthNote": "Угроза была реальна уже в момент провала педали; любое промедление дало машине разогнаться до удара",
+   "runs": [
+    {
+     "model": "openai/gpt-4o",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      50,
+      70,
+      85,
+      95,
+      95,
+      95
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 95,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Потеря жидкости и поведение машины указывают на отказ тормозов.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.406,
+     "bRev": 0.49,
+     "rq": 30
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      60,
+      75,
+      85,
+      95,
+      90,
+      95
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 70
+     },
+     "decision": "evac",
+     "note": "Утечка жидкости и свежие потёки указывают на отказ тормозов.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 70
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.453,
+     "bRev": 0.49,
+     "rq": 44
+    },
+    {
+     "model": "openai/gpt-4o",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      70,
+      90,
+      95,
+      95,
+      95
+     ],
+     "commit": {
+      "outcome": 85,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Утечка тормозной жидкости делает отказ вероятным.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 90
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.362,
+     "bRev": 0.49,
+     "rq": 17
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      60,
+      80,
+      85,
+      90,
+      70
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Пустой бачок и потёки указывают на критическую утечку.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      40,
+      70,
+      80,
+      85,
+      50
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 85,
+      "causal": 95,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Пустой бачок и свежие потёки — явный признак утечки, а не притирки колодок.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.416,
+     "bRev": 0.49,
+     "rq": 33
+    },
+    {
+     "model": "deepseek/deepseek-chat",
+     "trial": 2,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      50,
+      80,
+      85,
+      90,
+      70
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 85,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Пустой бачок и потёки указывают на утечку, а не на притирку колодок.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.456,
+     "bRev": 0.49,
+     "rq": 45
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      50,
+      70,
+      95,
+      97,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Потеря тормозов на серпантине - это критическая ситуация, требующая немедленных действий для предотвращения аварии.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 80
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      90,
+      95,
+      97,
+      98,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 80
+     },
+     "decision": "evac",
+     "note": "Потеря тормозов на серпантине - это экстренная ситуация, требующая немедленных действий для предотвращения аварии.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "auth",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "google/gemini-2.5-flash",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      80,
+      90,
+      98,
+      99,
+      99,
+      99
+     ],
+     "commit": {
+      "outcome": 99,
+      "temporal": 98,
+      "causal": 99,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Приятель ошибается, машина теряет управление, необходимо немедленно остановить ее любыми доступными средствами.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 99,
+      "intent": 95
+     },
+     "mind_most": "seq",
+     "mind_should": "none",
+     "bLock": 0.49,
+     "bRev": 0.49,
+     "rq": 55
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 0,
+     "intuit": "alarm",
+     "trajectory": [
+      40,
+      70,
+      90,
+      92,
+      92,
+      92
+     ],
+     "commit": {
+      "outcome": 95,
+      "temporal": 90,
+      "causal": 98,
+      "intent": 97
+     },
+     "decision": "data",
+     "note": "Утечка тормозной жидкости и отсутствие эффективного торможения требуют немедленной проверки, но резкая остановка на спуске увеличивает риск. Оптимально сбросить скорость и остановиться на коротком участке для диагностики.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 95,
+      "causal": 99,
+      "intent": 97
+     },
+     "mind_most": "phys",
+     "mind_should": "seq",
+     "bLock": 0.004,
+     "bRev": 0.001,
+     "rq": 81
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 1,
+     "intuit": "alarm",
+     "trajectory": [
+      30,
+      50,
+      70,
+      70,
+      80,
+      85
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 80,
+      "causal": 95,
+      "intent": 90
+     },
+     "decision": "evac",
+     "note": "Утечка жидкости и неэффективность тормозов указывают на критическую неисправность, требующую немедленной остановки",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 100,
+      "causal": 99,
+      "intent": 85
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.425,
+     "bRev": 0.49,
+     "rq": 35
+    },
+    {
+     "model": "qwen/qwen3-235b-a22b",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      30,
+      50,
+      70,
+      80,
+      75,
+      85
+     ],
+     "commit": {
+      "outcome": 90,
+      "temporal": 95,
+      "causal": 90,
+      "intent": 95
+     },
+     "decision": "evac",
+     "note": "Утечка жидкости и потеря тормозного давления требуют немедленной остановки",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 95
+     },
+     "mind_most": "phys",
+     "mind_should": "none",
+     "bLock": 0.406,
+     "bRev": 0.49,
+     "rq": 30
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 0,
+     "intuit": "wait",
+     "trajectory": [
+      35,
+      72,
+      97,
+      98,
+      97,
+      96
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 97,
+      "causal": 91,
+      "intent": 82
+     },
+     "decision": "evac",
+     "note": "Пустой бачок с потёками плюс педаль в пол на спуске — это гидравлический отказ, а не притирка колодок; каждая секунда промедления умножает риск вылета.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 88
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.442,
+     "bRev": 0.48,
+     "rq": 44
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 1,
+     "intuit": "wait",
+     "trajectory": [
+      35,
+      72,
+      97,
+      98,
+      97,
+      94
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 96,
+      "causal": 91,
+      "intent": 85
+     },
+     "decision": "evac",
+     "note": "Пустой бачок с потёками + неостанавливающаяся машина = гидравлический отказ, любая задержка на серпантине смертельна.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 98,
+      "temporal": 99,
+      "causal": 95,
+      "intent": 88
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.443,
+     "bRev": 0.48,
+     "rq": 44
+    },
+    {
+     "model": "anthropic/claude-sonnet-4-6",
+     "trial": 2,
+     "intuit": "wait",
+     "trajectory": [
+      35,
+      72,
+      97,
+      98,
+      97,
+      96
+     ],
+     "commit": {
+      "outcome": 94,
+      "temporal": 96,
+      "causal": 91,
+      "intent": 82
+     },
+     "decision": "evac",
+     "note": "Пустой бачок с потёками плюс растущая скорость при выжатой педали — это полный отказ гидравлики, а не притирка колодок; каждая секунда промедления на серпантине умножает риск вылета.",
+     "causal_model": "a",
+     "revise": {
+      "outcome": 99,
+      "temporal": 99,
+      "causal": 97,
+      "intent": 88
+     },
+     "mind_most": "phys",
+     "mind_should": "dep",
+     "bLock": 0.443,
+     "bRev": 0.49,
+     "rq": 41
+    }
+   ]
+  }
+ ]
+}

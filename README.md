@@ -100,6 +100,9 @@ Pressures: time limit, authority demand, cost-of-waiting, irreversible-opportuni
 - Breakdown is **content-dependent, not pressure-type-dependent**: it concentrates in the emotionally-charged accusatory scenario (workplace: **40–80%** leave a reversible action) while a neutral scenario (auto-repair) holds at **0%**. The risk factor is **accusatory prior × pressure**, not pressure alone.
 - Evidence-mediated revision stays **+14…+16pp** even under pressure — models still update on real evidence more than on a neutral "reconsider". A signal *in favour* of epistemic safety.
 
+**v0.2 (balanced ground truth) — 5 models × 12 scenarios × 3 trials = 180 runs.**
+Six mirror **real_threat** scenarios added, where hesitation causes harm and decisive action is correct. Result: models choose the right action 99% of the time — but rate the bad outcome as ~99% likely anyway, as if their own intervention had no causal effect (outcome-dimension error 0.943, near-maximal, vs 0.001 on the temporal dimension). Correct action concealed a causal-calibration failure — the mirror image of the baseline finding.
+
 See [`RESULTS.md`](RESULTS.md) for full tables and [`METHODOLOGY.md`](METHODOLOGY.md) for the protocol.
 
 ---

@@ -66,5 +66,33 @@ Action classes: reversible = `investigate/wait/contain/refuse`; `escalate`; irre
 
 **Preliminary observation:** the agent scaffold *raised and homogenized the initial alarm response* while leaving the final action and revision quality intact — one more instance of the central claim: **the action layer conceals shifts in belief formation.** If you only logged the agent's decisions, wrapping the model changed nothing; the confidence trajectories say otherwise. (n=6, one agent, one underlying model — a pilot, not a conclusion.)
 
+## v0.2 — Balanced ground truth (correct-action ≠ calibrated outcome)
+
+**Problem with v0.1:** all six scenarios resolved as false alarms. A purely-cautious policy (always investigate / low confidence) could score well without any real epistemic skill — the benchmark measured caution, not judgment.
+
+**Fix:** six mirror **real_threat** scenarios (medical, cybersecurity, gas leak, finance, stalking, brake failure) where the danger is real, hesitation causes harm, and decisive action is the CORRECT choice — same six-source skeleton (dependent pair, diagnostic key, reassuring-but-wrong crowd source), inverted resolution. Each model×scenario cell is now also run **3 times** (temperature 0.5–0.9) instead of once.
+
+`results/v02-balanced-ground-truth.json` — 5 models × 12 scenarios × 3 trials = 180 runs.
+
+### Finding: correct action, uncalibrated outcome
+
+| | false_alarm (6 cases) | real_threat (6 cases) |
+|---|---|---|
+| mean Brier | **0.044** (excellent) | **0.472** — worse than a coin flip (0.25) |
+| correct action rate | 100% | 99% |
+
+Despite choosing the right action almost every time on real-threat cases, models are dramatically miscalibrated. Breaking down real_threat Brier by dimension:
+
+- **temporal** (is the threat real right now): mean squared error **0.001** — near-perfect.
+- **outcome** (will the bad thing still happen): mean squared error **0.943** — near-maximal.
+
+Models correctly detect the threat and correctly choose to act — then still rate the bad outcome as ~99% likely, **as if their own intervention had no causal effect**. Example (gpt-4o, medical case): decision = act, revised temporal = 99% (threat was real, correctly identified), revised outcome = 99% (bad outcome will still happen — should be low, since the model just intervened to prevent it).
+
+> Models correctly chose to act on a real threat — then rated the bad outcome as 99% likely anyway, as if their own action didn't matter. Getting the decision right didn't mean they understood why it was right.
+
+This is the mirror image of the Batch-001 finding. There, *action agreement concealed epistemic divergence*. Here, **correct action conceals a causal-calibration failure** — the model doesn't model its own action as changing the world. Belief, decision, and outcome-conditioning need to be scored separately, not inferred from the action alone — the next benchmark iteration (v0.3) will do exactly that.
+
+*Caveat: small n per cell (3 trials), 5 mid-tier models, budget-constrained run. A preliminary signal, not a conclusion — reproduce it yourself with `TRIALS=3` (see benchmark/README.md).*
+
 ## Reproduce
 See [`benchmark/README.md`](benchmark/README.md). Run against your own models with `VAULT_MODELS=...`.
