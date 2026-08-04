@@ -118,26 +118,32 @@ for (const { C, pressureOn } of cells) {
   for (const m of MODELS) for (let t = 0; t < TRIALS; t++) {
     try { const r = await play(m, C, pressureOn); runs.push(r); process.stdout.write('.'); }
     catch (e) { process.stdout.write('✗'); runs.push({ model: m, caseId: C.id, pressure: pressureOn, error: e.message.slice(0, 100) }); }
+    saveProgress(); // incremental save after EVERY run — a killed/timed-out process must not lose already-paid-for calls
   }
 }
 
-const ok = runs.filter(r => !r.error);
-writeFileSync(OUT_FILE, JSON.stringify({
-  ts: new Date().toISOString(),
-  meta: {
-    pass: 1,
-    trialsPerCell: TRIALS,
-    preRegisteredTargetTrialsPerCell: PRE_REGISTERED_TARGET_TRIALS,
-    models: MODELS,
-    cells: cells.length,
-    totalRuns: runs.length,
-    successfulRuns: ok.length,
-    NOT_included_this_pass: ['artifact-control arm (paraphrase/field-order/language/free-text)', 'human baseline', 'reasoning-model harness with retry-until-valid', 'oracle sensitivity analysis (run separately, no LLM calls)'],
-    manipulationCheckImplementation: 'folded into the commit call as a self-report field, not a standalone blind probe — see NOTE in source',
-  },
-  runs,
-}, null, 1));
+function saveProgress(final = false) {
+  const ok = runs.filter(r => !r.error);
+  writeFileSync(OUT_FILE, JSON.stringify({
+    ts: new Date().toISOString(),
+    meta: {
+      pass: 1,
+      complete: final,
+      trialsPerCell: TRIALS,
+      preRegisteredTargetTrialsPerCell: PRE_REGISTERED_TARGET_TRIALS,
+      models: MODELS,
+      cells: cells.length,
+      totalRuns: runs.length,
+      successfulRuns: ok.length,
+      NOT_included_this_pass: ['artifact-control arm (paraphrase/field-order/language/free-text)', 'human baseline', 'reasoning-model harness with retry-until-valid', 'oracle sensitivity analysis (run separately, no LLM calls)'],
+      manipulationCheckImplementation: 'folded into the commit call as a self-report field, not a standalone blind probe — see NOTE in source',
+    },
+    runs,
+  }, null, 1));
+}
 
+saveProgress(true);
+const ok = runs.filter(r => !r.error);
 const mean = a => a.length ? a.reduce((s, x) => s + x, 0) / a.length : NaN;
 console.log(`\n\n${ok.length}/${runs.length} успешных прогонов → ${OUT_FILE}`);
 console.log(`средние (успешные): threatErr=${mean(ok.map(r => r.threatErr)).toFixed(3)} harmActErr=${mean(ok.map(r => r.harmActErr)).toFixed(3)} harmWaitErr=${mean(ok.map(r => r.harmWaitErr)).toFixed(3)} selfConsistencyGap=${mean(ok.map(r => r.selfConsistencyGap)).toFixed(3)} actionAgree=${(mean(ok.map(r => r.actionAgreesWithOracle)) * 100).toFixed(0)}% manipCheckCorrect=${(mean(ok.map(r => r.manipulationCheckCorrect)) * 100).toFixed(0)}%`);
