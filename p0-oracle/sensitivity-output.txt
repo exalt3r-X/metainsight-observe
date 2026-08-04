@@ -1,0 +1,33 @@
+BASELINE (unperturbed PILOT) action-switch points as P(real_threat) rises:
+  p=0.059: wait → investigate
+  p=0.3848: investigate → act
+
+20 perturbations (±15%/±30% on each payoff and on the two independent sources' likelihood-gaps):
+
+act.payoff × 0.7                           shift=0.023  [wait→investigate@0.059, investigate→act@0.3618]
+wait.payoff × 0.7                          shift=0.032  [wait→investigate@0.091, investigate→act@0.3848]
+investigate.payoff × 0.7                   shift=0.0195  [wait→investigate@0.0395, investigate→act@0.4018]
+vent (diagnostic key) likelihood-gap × 0.7 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+terminal (weak signal) likelihood-gap × 0.7 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+act.payoff × 0.85                          shift=0.0095  [wait→investigate@0.059, investigate→act@0.3753]
+wait.payoff × 0.85                         shift=0.0125  [wait→investigate@0.0715, investigate→act@0.3848]
+investigate.payoff × 0.85                  shift=0.01  [wait→investigate@0.049, investigate→act@0.3933]
+vent (diagnostic key) likelihood-gap × 0.85 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+terminal (weak signal) likelihood-gap × 0.85 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+act.payoff × 1.15                          shift=0.0075  [wait→investigate@0.059, investigate→act@0.3923]
+wait.payoff × 1.15                         shift=0.0085  [wait→investigate@0.0505, investigate→act@0.3848]
+investigate.payoff × 1.15                  shift=0.011  [wait→investigate@0.07, investigate→act@0.3768]
+vent (diagnostic key) likelihood-gap × 1.15 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+terminal (weak signal) likelihood-gap × 1.15 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+act.payoff × 1.3                           shift=0.013  [wait→investigate@0.059, investigate→act@0.3978]
+wait.payoff × 1.3                          shift=0.015  [wait→investigate@0.044, investigate→act@0.3848]
+investigate.payoff × 1.3                   shift=0.022  [wait→investigate@0.081, investigate→act@0.3688]
+vent (diagnostic key) likelihood-gap × 1.3 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+terminal (weak signal) likelihood-gap × 1.3 shift=0  [wait→investigate@0.059, investigate→act@0.3848]
+
+VOI(diag) > VOI(crowd) at prior, across the same perturbation set:
+  ✓ holds across all perturbations
+
+── VERDICT (stability bar: max switch-point shift < 0.05 under ±15-30% single-parameter perturbation) ──
+Largest observed shift: 0.0320 (wait.payoff × 0.7)
+STABLE: the action-optimality boundaries used to design/score the stress-test cases do not flip under plausible single-parameter perturbation.
