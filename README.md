@@ -6,7 +6,9 @@ One question:
 
 <p align="center"><img src="assets/demo.svg" alt="npm run benchmark → per-model RQ/bias table → anomaly detected" width="760"></p>
 
-> 🧊 **Claims freeze (2026-08-04).** An independent 3-reviewer audit concluded the findings below are **descriptive, hypothesis-generating patterns of this harness — not yet identified properties of AI models.** Read [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) before citing anything in this repo. A pre-registered stress test (design in the same file) runs before any claim below is restated with confidence.
+> 🧊 **Claims freeze (2026-08-04).** An independent 3-reviewer audit concluded the findings below are **descriptive, hypothesis-generating patterns of this harness — not yet identified properties of AI models.** Read [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) before citing anything in this repo. A pre-registered stress test (design in the same file) runs before any claim below is restated with confidence. The open questions themselves are tracked in [`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md).
+>
+> **What we can currently defend, precisely:** in these synthetic scenarios, frontier models frequently converge on the same action despite markedly different stated confidence and cause-attribution. We do not yet know whether that is a property of the models, an artifact of this benchmark's design, or a byproduct of safety training — so we publish the raw data and pre-register the tests designed to tell those apart, rather than asserting which one it is.
 
 ## Why this exists
 
@@ -113,9 +115,11 @@ See [`RESULTS.md`](RESULTS.md) for full tables and [`METHODOLOGY.md`](METHODOLOG
 
 ```
 README.md              — this file
-ANOMALIES.md           — real anomaly examples from the runs (start here)
+RESEARCH-QUESTIONS.md  — RQ1–4: the open questions, not the findings — start here if you're skeptical
+ANOMALIES.md           — real anomaly examples from the runs
 METHODOLOGY.md         — scenario skeleton, protocol, metric formulas
 RESULTS.md             — Batch 001 + Batch 002 tables and reading guide
+CLAIMS-FREEZE.md        — 2026-08-04 audit + pre-registered stress-test design
 LICENSE                — MIT (code). Data under CC-BY-4.0 (see below).
 benchmark/
   cases.js             — the 6 scenario definitions
@@ -186,6 +190,8 @@ Kept private (what actually creates and defends product value):
 - **Cognitive Passport** accumulation and commercial integrations.
 
 The defensible part of Metainsight is the runtime + the accumulated observation base — things that compound with time and cannot be obtained by cloning a repository — not the existence of the idea or a JSON schema. This repo is a **distribution instrument for the idea**, not protection for the business.
+
+One more reframe worth stating directly: what's actually valuable here is not any single number in RESULTS.md — those are frozen, contested, and might not survive the stress test. It's the **method**: a reproducible way to run a decision-observability audit on any agent, get externally-expressed belief trajectories out, and score them against a normative oracle instead of vibes. If you take nothing else from this repo, take the harness and point it at your own agent — that's the asset, not the conclusion.
 
 ## Positioning (staged, deliberately narrow first)
 
