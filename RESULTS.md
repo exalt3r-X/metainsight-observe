@@ -96,5 +96,7 @@ This is the mirror image of the Batch-001 finding. There, *action agreement conc
 
 *Caveat: small n per cell (3 trials), 5 mid-tier models, budget-constrained run. A preliminary signal, not a conclusion — reproduce it yourself with `TRIALS=3` (see benchmark/README.md).*
 
+> 🧊 **Correction note (2026-08-05).** The stress-test Pass 1 re-measured this effect with the single ambiguous "outcome" field split into three explicit targets (`P(threat)`, `P(harm | do(act))`, `P(harm | do(wait))`). Under that cleaner elicitation, the error shrinks from 0.943 (near-maximal) to ~0.10 — an order of magnitude smaller. The direction of the effect survives (see [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md) §2), but the *magnitude* reported above was substantially inflated by the ambiguous single-field format, not purely a causal-reasoning failure. Read 0.943 as an upper bound produced by a confusing question, not the size of the underlying effect.
+
 ## Reproduce
 See [`benchmark/README.md`](benchmark/README.md). Run against your own models with `VAULT_MODELS=...`.

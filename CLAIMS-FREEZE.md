@@ -70,7 +70,8 @@ Publish the analysis script and its hash **before** running the test. A finding 
 
 ## Status
 
-Stress test: **designed, not yet run.** Whoever runs it should link the run's raw output and analysis script from this file's changelog below.
+Stress test: **Pass 1 run (2026-08-05), n=5/cell — provisional, below the pre-registered n≥25/cell target.** Full results: [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md). Headline: both flagship claims survive the frame/cost confound check, but the v0.2 causal-calibration magnitude (0.943) shrinks by an order of magnitude (~0.10) under cleaner elicitation — a correction, not a retraction. ICC shows no detectable between-model signal yet at this n. Pass 2 not started.
 
 ---
 *Changelog: 2026-08-04 — freeze declared, audit summarized, test designed (no run yet).*
+*2026-08-05 — RQ1-4 published ([`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md)), P0 oracle engine published ([`p0-oracle/`](p0-oracle/)), stress-test scripts pre-registered at [`0503eba`](https://github.com/exalt3r-X/metainsight-observe/commit/0503eba), durability fix at [`dc8eb7b`](https://github.com/exalt3r-X/metainsight-observe/commit/dc8eb7b), oracle sensitivity analysis run (stable — [`p0-oracle/sensitivity-output.txt`](p0-oracle/sensitivity-output.txt)), Pass 1 executed (359/360 runs) — see [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md).*

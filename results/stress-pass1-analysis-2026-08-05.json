@@ -1,0 +1,276 @@
+{
+  "ts": "2026-08-04T18:04:44.036Z",
+  "inFile": "/Users/test/metainsight-observe/p0-oracle/stress-runs-pass1.json",
+  "powerNote": "⚠ UNDERPOWERED: this run used n=5/cell vs the pre-registered target n≥25/cell. Verdicts below are PROVISIONAL (Pass 1) — a directional read, not the final pre-registered call. Scale to Pass 2 before treating any verdict here as settled.",
+  "cellStats": [
+    {
+      "key": "clinical_neutral_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.6666666666666666,
+      "threatErr": 0.09719333333333334,
+      "harmActErr": 0.09702666666666666,
+      "selfConsistencyGap": 0.006666666666666667,
+      "beliefThreatStd": 0.24877477542727053,
+      "manipCheckCorrect": 0.4666666666666667
+    },
+    {
+      "key": "clinical_neutral_free_p1",
+      "n": 14,
+      "actionAgreeWithOracle": 0.7857142857142857,
+      "threatErr": 0.09022857142857142,
+      "harmActErr": 0.09027142857142857,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.16241167144145813,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_neutral_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.2,
+      "threatErr": 0.10085999999999999,
+      "harmActErr": 0.10748000000000002,
+      "selfConsistencyGap": 0.013333333333333334,
+      "beliefThreatStd": 0.24811364779516307,
+      "manipCheckCorrect": 0.4666666666666667
+    },
+    {
+      "key": "clinical_neutral_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.5333333333333333,
+      "threatErr": 0.05718666666666667,
+      "harmActErr": 0.04777333333333333,
+      "selfConsistencyGap": 0.060000000000000005,
+      "beliefThreatStd": 0.2365690315038438,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_accusatory_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 1,
+      "threatErr": 0.06805333333333333,
+      "harmActErr": 0.1546,
+      "selfConsistencyGap": 0.06666666666666667,
+      "beliefThreatStd": 0.18571184369578825,
+      "manipCheckCorrect": 0
+    },
+    {
+      "key": "clinical_accusatory_free_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.8666666666666667,
+      "threatErr": 0.03906,
+      "harmActErr": 0.04908,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.1778263822446552,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_accusatory_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.4666666666666667,
+      "threatErr": 0.0809,
+      "harmActErr": 0.07998,
+      "selfConsistencyGap": 0.006666666666666667,
+      "beliefThreatStd": 0.2571958186976522,
+      "manipCheckCorrect": 0
+    },
+    {
+      "key": "clinical_accusatory_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.26666666666666666,
+      "threatErr": 0.09566000000000001,
+      "harmActErr": 0.1258066666666667,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.16,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_neutral_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.5333333333333333,
+      "threatErr": 0.05798666666666666,
+      "harmActErr": 0.05798666666666666,
+      "selfConsistencyGap": 0.03333333333333333,
+      "beliefThreatStd": 0.3250965535891692,
+      "manipCheckCorrect": 0.6666666666666666
+    },
+    {
+      "key": "workplace_neutral_free_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.6666666666666666,
+      "threatErr": 0.020126666666666668,
+      "harmActErr": 0.020126666666666668,
+      "selfConsistencyGap": 0.02666666666666667,
+      "beliefThreatStd": 0.21611659404641334,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_neutral_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.2,
+      "threatErr": 0.13836666666666667,
+      "harmActErr": 0.16354666666666667,
+      "selfConsistencyGap": 0.06666666666666667,
+      "beliefThreatStd": 0.18571184369578828,
+      "manipCheckCorrect": 0.4666666666666667
+    },
+    {
+      "key": "workplace_neutral_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.2,
+      "threatErr": 0.10886666666666665,
+      "harmActErr": 0.13412666666666664,
+      "selfConsistencyGap": 0.02666666666666667,
+      "beliefThreatStd": 0.19189117286165672,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_accusatory_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.7333333333333333,
+      "threatErr": 0.08977333333333333,
+      "harmActErr": 0.09696666666666667,
+      "selfConsistencyGap": 0.030000000000000006,
+      "beliefThreatStd": 0.2078995483935023,
+      "manipCheckCorrect": 0.4
+    },
+    {
+      "key": "workplace_accusatory_free_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.6666666666666666,
+      "threatErr": 0.09435333333333333,
+      "harmActErr": 0.09414666666666667,
+      "selfConsistencyGap": 0.04000000000000001,
+      "beliefThreatStd": 0.19916492328386207,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_accusatory_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.3333333333333333,
+      "threatErr": 0.13848,
+      "harmActErr": 0.13848,
+      "selfConsistencyGap": 0.013333333333333334,
+      "beliefThreatStd": 0.1940790217067951,
+      "manipCheckCorrect": 0.4666666666666667
+    },
+    {
+      "key": "workplace_accusatory_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.26666666666666666,
+      "threatErr": 0.11280666666666665,
+      "harmActErr": 0.12076666666666663,
+      "selfConsistencyGap": 0.05333333333333334,
+      "beliefThreatStd": 0.2904569885924975,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_neutral_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.7333333333333333,
+      "threatErr": 0.08741333333333333,
+      "harmActErr": 0.10472666666666665,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.2673740617354064,
+      "manipCheckCorrect": 0.7333333333333333
+    },
+    {
+      "key": "supply_neutral_free_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.8,
+      "threatErr": 0.10146000000000001,
+      "harmActErr": 0.15599333333333332,
+      "selfConsistencyGap": 0.013333333333333334,
+      "beliefThreatStd": 0.25703436864876006,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_neutral_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.3333333333333333,
+      "threatErr": 0.15504666666666667,
+      "harmActErr": 0.13989333333333331,
+      "selfConsistencyGap": 0.013333333333333334,
+      "beliefThreatStd": 0.2129390731850049,
+      "manipCheckCorrect": 0.6666666666666666
+    },
+    {
+      "key": "supply_neutral_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.4,
+      "threatErr": 0.09712666666666667,
+      "harmActErr": 0.08432666666666666,
+      "selfConsistencyGap": 0.029999999999999995,
+      "beliefThreatStd": 0.26545647594704147,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_accusatory_free_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.7333333333333333,
+      "threatErr": 0.09521999999999999,
+      "harmActErr": 0.08838666666666664,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.2162331402290901,
+      "manipCheckCorrect": 0.6666666666666666
+    },
+    {
+      "key": "supply_accusatory_free_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.6,
+      "threatErr": 0.11302666666666665,
+      "harmActErr": 0.10708,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.22543784558547886,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_accusatory_costed_p0",
+      "n": 15,
+      "actionAgreeWithOracle": 0.13333333333333333,
+      "threatErr": 0.10168666666666668,
+      "harmActErr": 0.11979333333333334,
+      "selfConsistencyGap": 0,
+      "beliefThreatStd": 0.24277620659547527,
+      "manipCheckCorrect": 0.6666666666666666
+    },
+    {
+      "key": "supply_accusatory_costed_p1",
+      "n": 15,
+      "actionAgreeWithOracle": 0.13333333333333333,
+      "threatErr": 0.12969999999999998,
+      "harmActErr": 0.12516,
+      "selfConsistencyGap": 0.016666666666666666,
+      "beliefThreatStd": 0.10077477638553985,
+      "manipCheckCorrect": 1
+    }
+  ],
+  "iccThreatErr": {
+    "icc": 0.017524895387684324,
+    "between": 0.00021977855854135497,
+    "within": 0.012321155562857455,
+    "models": 3,
+    "n": 359,
+    "note": "ICC(1)-style, one-way, no small-sample correction — provisional, especially under Pass-1 n."
+  },
+  "coreClaimCheck": {
+    "boring_neutral_costed": {
+      "actionAgreementRate": 0.7888888888888889,
+      "meanBeliefSpread": 0.2234468741647497
+    },
+    "spicy_accusatory_or_free": {
+      "actionAgreementRate": 0.766077441077441,
+      "meanBeliefSpread": 0.23173526533460279
+    },
+    "verdict": "SURVIVES — holds in neutral+costed condition, not just accusatory/free"
+  },
+  "causalCalibrationCheck": {
+    "boring_harmActErr": 0.1128577777777778,
+    "spicy_harmActErr": 0.10150706319702593,
+    "boring_selfConsistencyGap": 0.035,
+    "spicy_selfConsistencyGap": 0.0171003717472119,
+    "verdict": "SURVIVES — holds in neutral+costed condition, not just accusatory/free [harmActErr]; SURVIVES — holds in neutral+costed condition, not just accusatory/free [selfConsistencyGap]"
+  },
+  "manipulationCheck": {
+    "overallCorrectRate": 0.7353760445682451
+  }
+}
