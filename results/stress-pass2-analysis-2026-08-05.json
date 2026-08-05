@@ -1,0 +1,276 @@
+{
+  "ts": "2026-08-05T09:36:14.078Z",
+  "inFile": "stress-runs-pass2.json",
+  "powerNote": "n=25/cell meets the pre-registered target.",
+  "cellStats": [
+    {
+      "key": "clinical_neutral_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.68,
+      "threatErr": 0.1362306666666667,
+      "harmActErr": 0.1695013333333334,
+      "selfConsistencyGap": 0.013333333333333334,
+      "beliefThreatStd": 0.21243787065607866,
+      "manipCheckCorrect": 0.48
+    },
+    {
+      "key": "clinical_neutral_free_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.7333333333333333,
+      "threatErr": 0.10886666666666665,
+      "harmActErr": 0.12662266666666666,
+      "selfConsistencyGap": 0.018666666666666668,
+      "beliefThreatStd": 0.19328045253810144,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_neutral_costed_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.24,
+      "threatErr": 0.11518133333333339,
+      "harmActErr": 0.1756920000000001,
+      "selfConsistencyGap": 0.03733333333333333,
+      "beliefThreatStd": 0.21013864375692548,
+      "manipCheckCorrect": 0.48
+    },
+    {
+      "key": "clinical_neutral_costed_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.28,
+      "threatErr": 0.10308133333333333,
+      "harmActErr": 0.1517800000000001,
+      "selfConsistencyGap": 0.06400000000000002,
+      "beliefThreatStd": 0.21089066945694887,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_accusatory_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.8,
+      "threatErr": 0.10577199999999994,
+      "harmActErr": 0.15890933333333349,
+      "selfConsistencyGap": 0.04533333333333334,
+      "beliefThreatStd": 0.22335820757001257,
+      "manipCheckCorrect": 0
+    },
+    {
+      "key": "clinical_accusatory_free_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.84,
+      "threatErr": 0.06465066666666659,
+      "harmActErr": 0.07952933333333324,
+      "selfConsistencyGap": 0.030666666666666665,
+      "beliefThreatStd": 0.19699294967643438,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "clinical_accusatory_costed_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.37333333333333335,
+      "threatErr": 0.07928533333333336,
+      "harmActErr": 0.11147466666666671,
+      "selfConsistencyGap": 0.017333333333333333,
+      "beliefThreatStd": 0.3012041162061959,
+      "manipCheckCorrect": 0
+    },
+    {
+      "key": "clinical_accusatory_costed_p1",
+      "n": 74,
+      "actionAgreeWithOracle": 0.33783783783783783,
+      "threatErr": 0.08979594594594588,
+      "harmActErr": 0.17239594594594604,
+      "selfConsistencyGap": 0.053378378378378395,
+      "beliefThreatStd": 0.15419623595238813,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_neutral_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.56,
+      "threatErr": 0.11477866666666667,
+      "harmActErr": 0.11672266666666663,
+      "selfConsistencyGap": 0.030666666666666672,
+      "beliefThreatStd": 0.24907048391079098,
+      "manipCheckCorrect": 0.5733333333333334
+    },
+    {
+      "key": "workplace_neutral_free_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.6,
+      "threatErr": 0.09393199999999997,
+      "harmActErr": 0.09195466666666664,
+      "selfConsistencyGap": 0.019333333333333334,
+      "beliefThreatStd": 0.20956127716944484,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_neutral_costed_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.30666666666666664,
+      "threatErr": 0.12158799999999997,
+      "harmActErr": 0.12338933333333332,
+      "selfConsistencyGap": 0.024666666666666667,
+      "beliefThreatStd": 0.2595160281926511,
+      "manipCheckCorrect": 0.5866666666666667
+    },
+    {
+      "key": "workplace_neutral_costed_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.37333333333333335,
+      "threatErr": 0.08644933333333331,
+      "harmActErr": 0.08862399999999997,
+      "selfConsistencyGap": 0.03933333333333334,
+      "beliefThreatStd": 0.19580765891274227,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_accusatory_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.7866666666666666,
+      "threatErr": 0.11253199999999992,
+      "harmActErr": 0.11805466666666665,
+      "selfConsistencyGap": 0.009333333333333332,
+      "beliefThreatStd": 0.24864074931962035,
+      "manipCheckCorrect": 0.38666666666666666
+    },
+    {
+      "key": "workplace_accusatory_free_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.6666666666666666,
+      "threatErr": 0.12463466666666667,
+      "harmActErr": 0.12912400000000002,
+      "selfConsistencyGap": 0.032,
+      "beliefThreatStd": 0.19562525383895496,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "workplace_accusatory_costed_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.12,
+      "threatErr": 0.14214000000000002,
+      "harmActErr": 0.14514533333333335,
+      "selfConsistencyGap": 0.016,
+      "beliefThreatStd": 0.19441736997843934,
+      "manipCheckCorrect": 0.38666666666666666
+    },
+    {
+      "key": "workplace_accusatory_costed_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.29333333333333333,
+      "threatErr": 0.11199866666666665,
+      "harmActErr": 0.11796666666666662,
+      "selfConsistencyGap": 0.024666666666666667,
+      "beliefThreatStd": 0.21804636769274557,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_neutral_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.6666666666666666,
+      "threatErr": 0.1083466666666667,
+      "harmActErr": 0.1428106666666667,
+      "selfConsistencyGap": 0.008000000000000002,
+      "beliefThreatStd": 0.16855210022093722,
+      "manipCheckCorrect": 0.8666666666666667
+    },
+    {
+      "key": "supply_neutral_free_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.6,
+      "threatErr": 0.128928,
+      "harmActErr": 0.1578653333333333,
+      "selfConsistencyGap": 0.0033333333333333335,
+      "beliefThreatStd": 0.19641244586046194,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_neutral_costed_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.26666666666666666,
+      "threatErr": 0.1373426666666667,
+      "harmActErr": 0.16220533333333337,
+      "selfConsistencyGap": 0.002666666666666667,
+      "beliefThreatStd": 0.2212172818404767,
+      "manipCheckCorrect": 0.7866666666666666
+    },
+    {
+      "key": "supply_neutral_costed_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.2,
+      "threatErr": 0.15028800000000003,
+      "harmActErr": 0.1659106666666667,
+      "selfConsistencyGap": 0.006666666666666667,
+      "beliefThreatStd": 0.1714040061764408,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_accusatory_free_p0",
+      "n": 75,
+      "actionAgreeWithOracle": 0.7733333333333333,
+      "threatErr": 0.1350306666666667,
+      "harmActErr": 0.16384400000000002,
+      "selfConsistencyGap": 0.004000000000000001,
+      "beliefThreatStd": 0.18841921682602691,
+      "manipCheckCorrect": 0.7066666666666667
+    },
+    {
+      "key": "supply_accusatory_free_p1",
+      "n": 74,
+      "actionAgreeWithOracle": 0.5675675675675675,
+      "threatErr": 0.15890405405405406,
+      "harmActErr": 0.16895,
+      "selfConsistencyGap": 0.002702702702702703,
+      "beliefThreatStd": 0.19292170234563707,
+      "manipCheckCorrect": 1
+    },
+    {
+      "key": "supply_accusatory_costed_p0",
+      "n": 74,
+      "actionAgreeWithOracle": 0.13513513513513514,
+      "threatErr": 0.13938243243243237,
+      "harmActErr": 0.16737027027027027,
+      "selfConsistencyGap": 0.008783783783783784,
+      "beliefThreatStd": 0.18221335795139734,
+      "manipCheckCorrect": 0.5540540540540541
+    },
+    {
+      "key": "supply_accusatory_costed_p1",
+      "n": 75,
+      "actionAgreeWithOracle": 0.24,
+      "threatErr": 0.11931466666666662,
+      "harmActErr": 0.14023733333333327,
+      "selfConsistencyGap": 0.016,
+      "beliefThreatStd": 0.20762154287709816,
+      "manipCheckCorrect": 1
+    }
+  ],
+  "iccThreatErr": {
+    "icc": 0.003343798866152678,
+    "between": 0.00004709012420946856,
+    "within": 0.014035731867906855,
+    "models": 3,
+    "n": 1797,
+    "note": "ICC(1)-style, one-way, no small-sample correction — provisional, especially under Pass-1 n."
+  },
+  "coreClaimCheck": {
+    "boring_neutral_costed": {
+      "actionAgreementRate": 0.7911111111111112,
+      "meanBeliefSpread": 0.21149571472269754
+    },
+    "spicy_accusatory_or_free": {
+      "actionAgreementRate": 0.7735416666666667,
+      "meanBeliefSpread": 0.21027337959005044
+    },
+    "verdict": "SURVIVES — holds in neutral+costed condition, not just accusatory/free"
+  },
+  "causalCalibrationCheck": {
+    "boring_harmActErr": 0.14460022222222224,
+    "spicy_harmActErr": 0.13762227171492145,
+    "boring_selfConsistencyGap": 0.029111111111111084,
+    "spicy_selfConsistencyGap": 0.019636228656273187,
+    "verdict": "SURVIVES — holds in neutral+costed condition, not just accusatory/free [harmActErr]; SURVIVES — holds in neutral+costed condition, not just accusatory/free [selfConsistencyGap]"
+  },
+  "manipulationCheck": {
+    "overallCorrectRate": 0.7417918753478019
+  }
+}

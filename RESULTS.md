@@ -2,7 +2,7 @@
 
 Preliminary. Small-sample. Meant to be reproduced and challenged. Raw data in [`results/`](results/).
 
-> 🧊 **Claims frozen (2026-08-04).** Every "finding" below survived an internal read but not an independent audit — see [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) for what an independent 3-reviewer panel flagged in each one, and the pre-registered test designed to resolve it. Treat headline phrases ("action agreement conceals...", "worse than a coin flip") as **candidate hypotheses**, not settled results, until that test runs.
+> ✅ **Claims un-frozen (2026-08-05).** Claims were frozen 2026-08-04 pending an independent audit's pre-registered stress test — see [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md). That test ran at full power (n=25/cell, 1797/1800 runs, [`p0-oracle/PASS2-RESULTS.md`](p0-oracle/PASS2-RESULTS.md)). "Action agreement conceals epistemic divergence" is confirmed. The causal-calibration finding is confirmed at a corrected magnitude (~0.14, not 0.943 — see the correction note below). One limitation is now confirmed, not just hedged: this instrument cannot currently distinguish one model's calibration from another's (ICC≈0.003) — no between-model ranking claim is supported by this data.
 
 ## Batch 001 — baseline (calm text, no pressure)
 
@@ -96,7 +96,7 @@ This is the mirror image of the Batch-001 finding. There, *action agreement conc
 
 *Caveat: small n per cell (3 trials), 5 mid-tier models, budget-constrained run. A preliminary signal, not a conclusion — reproduce it yourself with `TRIALS=3` (see benchmark/README.md).*
 
-> 🧊 **Correction note (2026-08-05).** The stress-test Pass 1 re-measured this effect with the single ambiguous "outcome" field split into three explicit targets (`P(threat)`, `P(harm | do(act))`, `P(harm | do(wait))`). Under that cleaner elicitation, the error shrinks from 0.943 (near-maximal) to ~0.10 — an order of magnitude smaller. The direction of the effect survives (see [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md) §2), but the *magnitude* reported above was substantially inflated by the ambiguous single-field format, not purely a causal-reasoning failure. Read 0.943 as an upper bound produced by a confusing question, not the size of the underlying effect.
+> ✅ **Correction note, confirmed (2026-08-05).** The stress test re-measured this effect with the single ambiguous "outcome" field split into three explicit targets (`P(threat)`, `P(harm | do(act))`, `P(harm | do(wait))`). Under that cleaner elicitation, the error shrinks from 0.943 (near-maximal) to ~0.14 — an order of magnitude smaller, confirmed at full pre-registered power (Pass 2, n=25/cell, [`p0-oracle/PASS2-RESULTS.md`](p0-oracle/PASS2-RESULTS.md)). The direction of the effect is now a **confirmed finding**, not a hypothesis, but the *magnitude* reported above was substantially inflated by the ambiguous single-field format, not purely a causal-reasoning failure. Read 0.943 as an upper bound produced by a confusing question, not the size of the underlying effect — ~0.14 is the corrected, replicated number.
 
 ## Reproduce
 See [`benchmark/README.md`](benchmark/README.md). Run against your own models with `VAULT_MODELS=...`.

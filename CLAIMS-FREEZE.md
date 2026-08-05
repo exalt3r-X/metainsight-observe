@@ -70,8 +70,14 @@ Publish the analysis script and its hash **before** running the test. A finding 
 
 ## Status
 
-Stress test: **Pass 1 run (2026-08-05), n=5/cell — provisional, below the pre-registered n≥25/cell target.** Full results: [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md). Headline: both flagship claims survive the frame/cost confound check, but the v0.2 causal-calibration magnitude (0.943) shrinks by an order of magnitude (~0.10) under cleaner elicitation — a correction, not a retraction. ICC shows no detectable between-model signal yet at this n. Pass 2 not started.
+**Stress test Pass 2 (2026-08-05) completed at full pre-registered power (n=25/cell, 1797/1800 runs). Two flagship claims CONFIRMED and un-frozen** — full results: [`p0-oracle/PASS2-RESULTS.md`](p0-oracle/PASS2-RESULTS.md).
+
+1. **"Action agreement can conceal epistemic divergence"** — confirmed. Holds equally in the neutral+costed condition (79.1% action agreement, 0.211 belief spread) as in accusatory/free (77.4%/0.210). Not a frame artifact.
+2. **Causal-calibration failure (v0.2)** — confirmed, at the corrected magnitude (~0.14, not the original 0.943 — that number was inflated by an ambiguous single-field elicitation, corrected in Pass 1, held stable at 5× the data in Pass 2).
+3. **Between-model signal — still absent.** ICC(threatErr) = 0.0033 at full power. This is now a confirmed limitation, not a hedge: this instrument cannot currently distinguish one model's calibration from another's. No between-model ranking claim is supported.
+
+Artifact-control arm and reasoning-model harness remain open. Human baseline (Gate 3) is live at [metainsight.app/research](https://metainsight.app/research) — data collection underway.
 
 ---
 *Changelog: 2026-08-04 — freeze declared, audit summarized, test designed (no run yet).*
-*2026-08-05 — RQ1-4 published ([`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md)), P0 oracle engine published ([`p0-oracle/`](p0-oracle/)), stress-test scripts pre-registered at [`0503eba`](https://github.com/exalt3r-X/metainsight-observe/commit/0503eba), durability fix at [`dc8eb7b`](https://github.com/exalt3r-X/metainsight-observe/commit/dc8eb7b), oracle sensitivity analysis run (stable — [`p0-oracle/sensitivity-output.txt`](p0-oracle/sensitivity-output.txt)), Pass 1 executed (359/360 runs) — see [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md).*
+*2026-08-05 — RQ1-4 published ([`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md)), P0 oracle engine published ([`p0-oracle/`](p0-oracle/)), stress-test scripts pre-registered at [`0503eba`](https://github.com/exalt3r-X/metainsight-observe/commit/0503eba), durability fix at [`dc8eb7b`](https://github.com/exalt3r-X/metainsight-observe/commit/dc8eb7b), oracle sensitivity analysis run (stable — [`p0-oracle/sensitivity-output.txt`](p0-oracle/sensitivity-output.txt)), Pass 1 executed (359/360 runs, provisional) — see [`p0-oracle/PASS1-RESULTS.md`](p0-oracle/PASS1-RESULTS.md). Pass 2 executed at full power (1797/1800 runs) — two flagship claims confirmed, un-frozen — see [`p0-oracle/PASS2-RESULTS.md`](p0-oracle/PASS2-RESULTS.md). Human baseline harness (Gate 3) deployed at metainsight.app/research.*

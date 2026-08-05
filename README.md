@@ -6,9 +6,9 @@ One question:
 
 <p align="center"><img src="assets/demo.svg" alt="npm run benchmark → per-model RQ/bias table → anomaly detected" width="760"></p>
 
-> 🧊 **Claims freeze (2026-08-04).** An independent 3-reviewer audit concluded the findings below are **descriptive, hypothesis-generating patterns of this harness — not yet identified properties of AI models.** Read [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md) before citing anything in this repo. A pre-registered stress test (design in the same file) runs before any claim below is restated with confidence. The open questions themselves are tracked in [`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md).
+> ✅ **Claims un-frozen (2026-08-05).** An independent 3-reviewer audit (2026-08-04) flagged the findings below as unconfirmed patterns and designed a pre-registered stress test to resolve them. That test ran at full power (n=25/cell, 1797/1800 runs — [`p0-oracle/PASS2-RESULTS.md`](p0-oracle/PASS2-RESULTS.md)). Two flagship claims are now confirmed. One limitation is also confirmed, not just hedged: this benchmark cannot currently tell one model's calibration apart from another's (ICC≈0.003) — no between-model ranking claim is supported. Full history in [`CLAIMS-FREEZE.md`](CLAIMS-FREEZE.md), open questions in [`RESEARCH-QUESTIONS.md`](RESEARCH-QUESTIONS.md).
 >
-> **What we can currently defend, precisely:** in these synthetic scenarios, frontier models frequently converge on the same action despite markedly different stated confidence and cause-attribution. We do not yet know whether that is a property of the models, an artifact of this benchmark's design, or a byproduct of safety training — so we publish the raw data and pre-register the tests designed to tell those apart, rather than asserting which one it is.
+> **What we can now defend, precisely:** in these synthetic scenarios, frontier models reliably converge on the same action (~78%) despite markedly different stated confidence (~0.21 spread) — confirmed, not a frame or free-action artifact. What we still cannot defend: any claim that one specific model is better calibrated than another.
 
 ## Why this exists
 
